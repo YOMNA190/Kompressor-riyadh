@@ -3,209 +3,1474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كمبروسور - تسليك صرف صحي وتنظيف بيارات بجهاز الكمبروسر | الرياض 24/7</title>
+    <title>النخبة للتشطيبات | لياسة وترميم فاخر بالرياض</title>
     
-    <!-- Open Graph for Social Media Sharing -->
-    <meta property="og:title" content="كمبروسور - تسليك صرف صحي وتنظيف بيارات بجهاز الكمبروسر">
-    <meta property="og:description" content="خدمات تسليك المجاري، شفط البيارات، سحب صفيات المطاعم، ورفع الدهون المجمدة في جميع أحياء الرياض.">
-    <meta property="og:type" content="website">
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "كمبروسور",
-      "description": "خدمات الصرف الصحي الاحترافية في الرياض على مدار 24 ساعة.",
-      "telephone": "+966576572402",
-      "areaServed": "الرياض",
-      "availableLanguage": "Arabic",
-      "serviceType": ["تسليك مجاري", "شفط بيارات", "تنظيف خزانات", "صيانة مطاعم", "سحب صفيات المطاعم", "تسليك بجهاز الكمبروسر"]
-    }
+    <!-- علامة التتبع Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17714550302"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17714550302');
     </script>
     
-    <!-- Styles and Fonts -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* ===== CSS Variables ===== */
         :root {
-            --primary-white: #FFFFFF;
-            --light-bg: #F8FAFC;
-            --light-gray: #F1F5F9;
-            --border-light: #E2E8F0;
-            --text-dark: #1E293B;
-            --text-gray: #64748B;
-            --primary-gold: #D4AF37;
-            --gold-dark: #B8941F;
+            --primary-color: #d4a574;
+            --secondary-color: #b88c5c;
+            --dark-color: #1a1a1a;
+            --light-color: #f5f5f5;
+            --text-color: #333;
+            --border-radius: 20px;
+            --section-padding: 80px 0;
+            --transition: all 0.3s ease;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
-        html { scroll-behavior: smooth; }
+
+        /* ===== Reset & Base Styles ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: var(--primary-white);
-            color: var(--text-dark);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
             overflow-x: hidden;
         }
-        .section-padding { padding: 6rem 0; }
-        .container-custom { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
-        .section-title { position: relative; display: inline-block; margin-bottom: 2rem; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 20px;
+        }
+
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -12px;
-            right: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-gold), var(--gold-dark));
-            border-radius: 2px;
+            height: 3px;
+            background-color: var(--primary-color);
         }
-        .section-title.center::after { right: 50%; transform: translateX(50%); }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-gold), var(--gold-dark));
-            color: white;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: none;
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
             font-weight: 700;
+            font-size: 18px;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 165, 116, 0.4);
+        }
+
+        /* ===== أزرار التواصل العملاقة ===== */
+        .mega-contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .mega-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 25px 50px;
+            border-radius: 70px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 24px;
+            transition: var(--transition);
+            border: 3px solid transparent;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .mega-phone {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--dark-color);
+            border: 3px solid var(--primary-color);
+        }
+
+        .mega-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border: 3px solid #25D366;
+        }
+
+        .mega-button:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .mega-button .icon {
+            font-size: 32px;
+        }
+
+        /* ===== Floating Action Buttons - معدل بحجم أكبر ===== */
+        .floating-buttons {
+            position: fixed;
+            left: 40px;
+            bottom: 40px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .floating-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
             position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-button.phone {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .floating-button.whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+
+        .floating-button:hover {
+            transform: translateY(-8px) scale(1.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(212, 165, 116, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 165, 116, 0);
+            }
+        }
+
+        .floating-button::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            left: 90px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--dark-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        .floating-button:hover::after {
+            opacity: 1;
+            visibility: visible;
+            left: 95px;
+        }
+
+        /* ===== Navigation Bar ===== */
+        .navbar {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo::before {
+            content: "👑";
+            font-size: 26px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            transition: var(--transition);
+            padding: 8px 15px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            background-color: rgba(212, 165, 116, 0.15);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 80%;
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+            animation: zoomIn 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+
+        .hero-overlay h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+            animation: fadeInUp 1s ease-out;
+            background: linear-gradient(45deg, var(--primary-color), #f5e6d3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-overlay p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            font-weight: 500;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== Services Section ===== */
+        .services {
+            padding: var(--section-padding);
+            background-color: var(--light-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 45px 35px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 165, 116, 0.2);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-icon {
+            font-size: 60px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* ===== Portfolio Section ===== */
+        .portfolio {
+            padding: var(--section-padding);
+            background-color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(212, 165, 116, 0.2), rgba(26, 26, 26, 0.3));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .gallery-item::after {
+            content: '👁️ عرض الصورة';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+
+        .gallery-item:hover::before,
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        /* ===== Location Section ===== */
+        .location {
+            padding: var(--section-padding);
+            background-color: var(--light-color);
+        }
+
+        .location-subtitle {
+            text-align: center;
+            font-size: 19px;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .area-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .area-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-color);
+        }
+
+        .area-icon {
+            font-size: 46px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .area-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .area-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ===== Testimonials Section - تصميم كريتيف أفقي ===== */
+        .testimonials {
+            padding: var(--section-padding);
+            background: linear-gradient(135deg, #f9f5f0 0%, #f0e6d8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(212, 165, 116, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .testimonials::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background-color: rgba(212, 165, 116, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .testimonials .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 35px 30px 30px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            border: none;
             overflow: hidden;
             z-index: 1;
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-        }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5); }
-        .btn-secondary { background-color: transparent; color: var(--text-dark); border: 2px solid var(--border-light); font-weight: bold; transition: all 0.3s ease; }
-        .btn-secondary:hover { background-color: var(--light-gray); border-color: var(--primary-gold); transform: translateY(-3px); }
-        .btn-outline { background-color: transparent; color: var(--primary-gold); border: 2px solid var(--primary-gold); font-weight: bold; transition: all 0.3s ease; }
-        .btn-outline:hover { background-color: var(--primary-gold); color: white; transform: translateY(-3px); }
-        .service-card {
-            background-color: white;
-            border: 1px solid var(--border-light);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
             height: 100%;
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+        }
+
+        .testimonial-card::after {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            font-size: 100px;
+            color: var(--primary-color);
+            opacity: 0.1;
+            font-family: serif;
+            line-height: 1;
+            font-weight: bold;
+            z-index: -1;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 2;
+            flex-grow: 1;
+        }
+
+        .testimonial-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #555;
+            font-style: italic;
+            position: relative;
+            padding-right: 15px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(212, 165, 116, 0.2);
+        }
+
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.4);
+            border: 2px solid white;
+        }
+
+        .client-details h4 {
+            font-size: 18px;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+            font-weight: 800;
+        }
+
+        .client-details p {
+            font-size: 14px;
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+            background-color: rgba(212, 165, 116, 0.15);
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        /* ===== Contact Section ===== */
+        .contact {
+            padding: var(--section-padding);
+            background: linear-gradient(135deg, var(--dark-color) 0%, #2a2a2a 100%);
+            color: white;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-            border-radius: 16px;
         }
-        .service-card:hover { transform: translateY(-12px); border-color: rgba(212, 175, 55, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); }
-        .logo { background: linear-gradient(135deg, var(--primary-gold), var(--gold-dark)); color: white; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-weight: 900; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4); }
-        .header-sticky { background: rgba(255, 255, 255, 0.97); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; }
-        .hero-section { position: relative; overflow: hidden; background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%); }
-        .hero-badge { display: inline-flex; align-items: center; background: rgba(212, 175, 55, 0.1); color: var(--primary-gold); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50px; padding: 0.6rem 1.2rem; margin-bottom: 1.5rem; font-weight: 700; backdrop-filter: blur(5px); }
-        .reveal { position: relative; transform: translateY(50px); opacity: 0; transition: 1s all cubic-bezier(0.165, 0.84, 0.44, 1); }
-        .reveal.active { transform: translateY(0); opacity: 1; }
-        .floating { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
-        .pulse-gold { animation: pulse-gold 2s infinite; }
-        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
-        .phone-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center; animation: fadeIn 0.3s ease; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .phone-modal-content { background-color: white; padding: 2.5rem; border-radius: 1.5rem; text-align: center; border: 1px solid var(--border-light); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15); max-width: 90%; width: 450px; position: relative; animation: scaleIn 0.3s ease; }
-        @keyframes scaleIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-        .phone-modal-content::before { content: ''; position: absolute; top: 0; right: 0; width: 100%; height: 5px; background: linear-gradient(90deg, var(--primary-gold), var(--gold-dark)); border-radius: 1.5rem 1.5rem 0 0; }
-        .phone-modal h3 { color: var(--text-dark); margin-bottom: 1rem; font-size: 1.5rem; }
-        .phone-number-large { font-size: 2rem; font-weight: bold; color: var(--text-dark); margin: 1.5rem 0; direction: ltr; display: block; letter-spacing: 1px; }
-        .modal-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
-        .copy-btn { background: linear-gradient(135deg, var(--primary-gold), var(--gold-dark)); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 0.5rem; font-weight: bold; cursor: pointer; transition: all 0.3s; }
-        .copy-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); }
-        .close-btn { background-color: transparent; color: var(--text-dark); border: 1px solid var(--border-light); padding: 0.8rem 1.5rem; border-radius: 0.5rem; font-weight: bold; cursor: pointer; transition: all 0.3s; }
-        .close-btn:hover { background-color: var(--light-gray); }
-        .copy-success { color: #10B981; margin-top: 0.5rem; display: none; animation: fadeIn 0.5s ease; }
-        .slant-bg { position: relative; overflow: hidden; }
-        .slant-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--light-bg) 0%, white 100%); z-index: -1; }
-        .testimonial-card { background: white; border-radius: 16px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); border: 1px solid var(--border-light); transition: all 0.3s; position: relative; overflow: hidden; }
-        .testimonial-card::before { content: ''; position: absolute; top: 0; right: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary-gold), var(--gold-dark)); }
-        .testimonial-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); }
-        .feature-section { background: linear-gradient(135deg, var(--light-bg) 0%, white 100%); position: relative; }
-        .feature-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E"); opacity: 0.5; z-index: 0; }
-        .feature-content { position: relative; z-index: 1; }
-        .stats-card { background: white; border-radius: 16px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); border: 1px solid var(--border-light); transition: all 0.3s; }
-        .stats-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); }
-        .floating-whatsapp { position: fixed; bottom: 25px; left: 25px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 99; transition: all 0.3s; animation: pulse-green 2s infinite; }
-        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-        .floating-whatsapp:hover { transform: scale(1.1); }
-        .service-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 16px 16px 0 0; }
-        .call-button { cursor: pointer; }
-    </style> 
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(212,165,116,0.1)" stroke-width="2" fill="none"/><path d="M0,70 Q25,60 50,70 T100,70" stroke="rgba(212,165,116,0.1)" stroke-width="2" fill="none"/><path d="M0,30 Q25,20 50,30 T100,30" stroke="rgba(212,165,116,0.1)" stroke-width="2" fill="none"/></svg>');
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .contact .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact .section-title {
+            color: var(--primary-color);
+        }
+
+        .contact .section-title::after {
+            background-color: var(--primary-color);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-description {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .phone-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--dark-color);
+        }
+
+        .phone-button:hover {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 165, 116, 0.4);
+        }
+
+        .whatsapp-button {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+        }
+
+        .whatsapp-button:hover {
+            background: transparent;
+            color: #25D366;
+            border-color: #25D366;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+        }
+
+        .button-icon {
+            font-size: 22px;
+        }
+
+        .contact-details {
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 35px 30px;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-details h4 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .contact-item .icon {
+            font-size: 24px;
+            color: var(--primary-color);
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .contact-item p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 50px 0 40px;
+            border-top: 5px solid var(--primary-color);
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(212, 165, 116, 0.05) 0%, transparent 50%);
+        }
+
+        .footer .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer p {
+            margin: 12px 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .footer-contact a:hover {
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 1200px) {
+            .floating-buttons {
+                left: 30px;
+                bottom: 30px;
+            }
+            
+            .mega-button {
+                padding: 22px 40px;
+                font-size: 22px;
+                min-width: 250px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-overlay h1 {
+                font-size: 48px;
+            }
+            
+            .hero-overlay p {
+                font-size: 20px;
+            }
+            
+            .contact-content {
+                gap: 40px;
+            }
+            
+            .floating-buttons {
+                left: 25px;
+                bottom: 25px;
+            }
+            
+            .floating-button {
+                width: 70px;
+                height: 70px;
+                font-size: 28px;
+            }
+            
+            .floating-button::after {
+                left: 80px;
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+            
+            .mega-button {
+                padding: 20px 35px;
+                font-size: 20px;
+                min-width: 220px;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 12px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: var(--dark-color);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                padding: 25px 0;
+                gap: 0;
+                z-index: 998;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 18px 0;
+            }
+
+            .hero {
+                height: 85vh;
+                min-height: 500px;
+                margin-top: 70px;
+            }
+
+            .hero-overlay h1 {
+                font-size: 36px;
+            }
+
+            .hero-overlay p {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 45px;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .cta-button,
+            .contact-button {
+                padding: 18px 40px;
+                font-size: 18px;
+            }
+            
+            .service-card,
+            .testimonial-card,
+            .area-card {
+                padding: 35px 25px;
+            }
+            
+            .floating-buttons {
+                left: 20px;
+                bottom: 20px;
+            }
+            
+            .floating-button {
+                width: 65px;
+                height: 65px;
+                font-size: 26px;
+            }
+            
+            .floating-button::after {
+                display: none;
+            }
+            
+            .client-info {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .client-avatar {
+                width: 55px;
+                height: 55px;
+                font-size: 18px;
+            }
+            
+            .mega-contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .mega-button {
+                width: 100%;
+                max-width: 300px;
+                padding: 18px 30px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-overlay h1 {
+                font-size: 32px;
+            }
+
+            .hero-overlay p {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                padding: 16px 35px;
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-buttons {
+                gap: 15px;
+            }
+            
+            .contact-button {
+                padding: 18px 25px;
+                font-size: 16px;
+            }
+            
+            .button-icon {
+                font-size: 20px;
+            }
+            
+            .floating-buttons {
+                left: 15px;
+                bottom: 15px;
+            }
+            
+            .floating-button {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+            
+            .footer-contact {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .mega-button {
+                padding: 16px 25px;
+                font-size: 16px;
+                min-width: auto;
+            }
+            
+            .mega-button .icon {
+                font-size: 24px;
+            }
+            
+            .testimonial-card {
+                padding: 25px 20px 20px 20px;
+            }
+            
+            .testimonial-content p {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-overlay h1 {
+                font-size: 28px;
+            }
+
+            .hero-overlay p {
+                font-size: 15px;
+            }
+
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .testimonial-content p {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <!-- زر واتساب عائم -->
-    <a href="https://wa.me/966576572402" target="_blank" class="floating-whatsapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- نافذة عرض الرقم -->
-    <div id="phoneModal" class="phone-modal">
-        <div class="phone-modal-content">
-            <h3>اتصل بنا الآن</h3>
-            <p>يمكنك الاتصال بنا مباشرة أو نسخ الرقم</p>
-            <span id="displayPhoneNumber" class="phone-number-large">+966576572402</span>
-            <div class="modal-buttons">
-                <button id="copyBtn" class="copy-btn"><i class="fas fa-copy"></i> نسخ الرقم</button>
-                <a href="tel:+966576572402" class="copy-btn"><i class="fas fa-phone"></i> اتصال</a>
-                <button id="closeModal" class="close-btn">إغلاق</button>
-            </div>
-            <div id="copySuccess" class="copy-success"><i class="fas fa-check-circle"></i> تم نسخ الرقم بنجاح</div>
-        </div>
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+966542906096" class="floating-button phone" data-tooltip="اتصل الآن">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/966542906096" target="_blank" class="floating-button whatsapp" data-tooltip="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
-    <!-- Header -->
-    <header class="header-sticky fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300">
-        <div class="container-custom flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3">
-                <div class="logo">ك</div>
-                <span class="text-gray-800 font-black text-2xl tracking-tight">كمبروسور</span>
-            </a>
-            <div class="flex items-center gap-3">
-                <a href="https://wa.me/966576572402" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2.5 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 hover:scale-105 shadow-lg">
-                    <i class="fab fa-whatsapp text-lg"></i>
-                    <span class="hidden sm:inline">واتساب</span>
-                </a>
-                <button class="btn-primary px-5 py-2.5 rounded-xl text-lg pulse-gold call-button">
-                    <span class="flex items-center gap-2">
-                        <i class="fas fa-phone"></i>
-                        <span class="hidden sm:inline">اتصل الآن</span>
-                    </span>
-                </button>
-            </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">النخبة للتشطيبات</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#portfolio">معرض الأعمال</a></li>
+                <li><a href="#location">المناطق التي نغطيها</a></li>
+                <li><a href="#testimonials">آراء العملاء</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section pt-32 pb-20 md:py-32">
-        <div class="container-custom">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 reveal">
-                    <div class="hero-badge"><i class="fas fa-star mr-2"></i><span>الخدمة المميزة في الرياض</span></div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-gray-900">تسليك صرف صحي وتنظيف بيارات <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-700">بجهاز الكمبروسر</span> بالرياض</h1>
-                    <p class="text-xl mb-10 max-w-xl text-gray-600 leading-relaxed">جودة، دقة، وسرعة. فريقنا المحترف جاهز لخدمتك على مدار الساعة بأحدث المعدات والتقنيات المتطورة.</p>
-                    <div class="flex flex-wrap gap-4 mb-10">
-                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100"><div class="text-yellow-400 flex"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><span class="text-gray-600">(4.9/5)</span></div>
-                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100"><i class="fas fa-users text-primary-gold"></i><span class="text-gray-600">خدمة +500 عميل</span></div>
-                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100"><i class="fas fa-clock text-primary-gold"></i><span class="text-gray-600">استجابة فورية 24/7</span></div>
-                    </div>
-                    <div class="flex gap-5 flex-wrap">
-                        <button class="btn-primary px-8 py-4 rounded-xl text-xl font-bold call-button"><span class="flex items-center gap-3"><i class="fas fa-phone-volume"></i>اطلب خدمة طارئة</span></button>
-                        <a href="#services" class="btn-secondary px-7 py-4 rounded-xl text-xl font-bold"><span class="flex items-center gap-3"><i class="fas fa-info-circle"></i>اعرف المزيد</span></a>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/hero.jpeg" alt="أعمال لياسة فاخرة" class="hero-image">
+            <div class="hero-overlay">
+                <h1>التميز في التشطيبات الفاخرة <br> عبر جميع أحياء الرياض</h1>
+                <p>نغطي كافة مناطق الرياض بأعمال اللياسة والترميم والتشطيبات الفاخرة، نصل إليكم أينما كنتم في العاصمة</p>
+                <a href="#contact" class="cta-button">اطلب عرض سعر مجاني</a>
+                
+                <!-- أزرار التواصل العملاقة -->
+                <div class="mega-contact-buttons">
+                    <a href="tel:+966542906096" class="mega-button mega-phone">
+                        <i class="fas fa-phone icon"></i>
+                        اتصل الآن
+                    </a>
+                    <a href="https://wa.me/966542906096" target="_blank" class="mega-button mega-whatsapp">
+                        <i class="fab fa-whatsapp icon"></i>
+                        واتساب مباشر
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المتخصصة</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏛️</div>
+                    <h3>لياسة القصور والفلل</h3>
+                    <p>تنفيذ أعمال اللياسة للمشاريع السكنية الفاخرة بدقة عالية وتفاصيل استثنائية.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>الترميم وإعادة التأهيل</h3>
+                    <p>إعادة تأهيل المباني القديمة وحلول ترميم مبتكرة تحافظ على الجمالية والقوة.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>المشاريع التجارية الراقية</h3>
+                    <p>تنفيذ أعمال التشطيبات الداخلية والخارجية للمعارض والمطاعم والمكاتب الفاخرة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">معرض أعمالنا</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/webp.1" alt="مشروع تشطيب فاخر">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/7f63de998285165b56108b748dd406a3.jpg" alt="تشطيبات داخلية حديثة">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Afterbe for .webp" alt="تصميم داخلي عصري">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery_1.webp" alt="تشطيبات خارجية">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery_2.jpg" alt="لياسة فاخرة">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery_3.jpg" alt="فيلا حديثة">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery_4.jpg" alt="تشطيبات معاصرة">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery_5.webp" alt="تصميم خارجي">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery_6.jpg" alt="مشروع ترميم">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Istockphoto-1208971310-612x612-1.jpg" alt="تشطيبات حديثة">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/M.jpg" alt="تصميم فاخر">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/MgxrnJTL6TJGMJIMSiMzNFj.webp" alt="تصميم فاخر">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Modern-Classic-Villa-Facades-MamlakatAI zuhur.com_.webp" alt="واجهات فيلات">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Yo.jpg" alt="تشطيبات متكاملة">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/png.l" alt="تصميم داخلي">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">نغطي جميع أحياء الرياض</h2>
+            <p class="location-subtitle">نعمل في جميع مناطق الرياض الرئيسية والفرعية، ونسعى لتقديم خدماتنا في كل حي من أحياء العاصمة بأعلى معايير الجودة</p>
+            
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon">🏘️</div>
+                    <h3>الشمالية</h3>
+                    <p>الملز، العليا، العريجاء، النخيل، المرسلات</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🏙️</div>
+                    <h3>الوسطى</h3>
+                    <p>الربوة، الملز، البطحاء، الفوطة، المنصورة</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🏡</div>
+                    <h3>الغربية</h3>
+                    <p>النسيم، الشفا، طيبة، المصيف، البديعة</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🏛️</div>
+                    <h3>الشرقية</h3>
+                    <p>اليرموك، النظيم، العدام، حي الإسكان</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🏰</div>
+                    <h3>الجنوبية</h3>
+                    <p>الشفا، طيبة، الخزامى، الشعلة، المصيف</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🎯</div>
+                    <h3>الأحياء الفاخرة</h3>
+                    <p>اليرموك، النرجس، الربيع، الصحافة، الحمراء</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">آراء عملائنا من مختلف أحياء الرياض</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"الله يعطيهم العافية، شغلهم مرتب ونظيف. سووا لي تشطيب الفيلا في النرجس وما قصر، كل التفاصيل كانت مضبوطة والوقت محترم."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">أ</div>
+                            <div class="client-details">
+                                <h4>أحمد السليمان</h4>
+                                <p>حي النرجس - الرياض</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 reveal" style="transition-delay: 300ms;">
-                    <div class="relative">
-                        <div class="absolute -top-6 -right-6 w-64 h-64 bg-primary-gold opacity-10 rounded-full"></div>
-                        <div class="absolute -bottom-6 -left-6 w-64 h-64 bg-primary-gold opacity-10 rounded-full"></div>
-                        <div class="relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 stats-card">
-                            <div class="flex items-center gap-4 mb-6"><div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md"><i class="fas fa-clock text-white text-2xl"></i></div><div><h3 class="text-xl font-bold text-gray-900">خدمة 24/7</h3><p class="text-gray-600">متاحون على مدار الساعة</p></div></div>
-                            <div class="flex items-center gap-4 mb-6"><div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md"><i class="fas fa-truck text-white text-2xl"></i></div><div><h3 class="text-xl font-bold text-gray-900">وصول سريع</h3><p class="text-gray-600">خلال 30-60 دقيقة</p></div></div>
-                            <div class="flex items-center gap-4"><div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md"><i class="fas fa-shield-alt text-white text-2xl"></i></div><div><h3 class="text-xl font-bold text-gray-900">ضمان الجودة</h3><p class="text-gray-600">ضمان على جميع الخدمات</p></div></div>
-                            <div id="stats" class="mt-8 pt-6 border-t border-gray-200">
-                                <div class="flex justify-between items-center">
-                                    <div class="text-center"><div class="text-2xl font-black text-gray-900" data-target="500">0</div><div class="text-gray-600">عميل راضٍ</div></div>
-                                    <div class="text-center"><div class="text-2xl font-black text-gray-900" data-target="24">0</div><div class="text-gray-600">خدمة/7 أيام</div></div>
-                                    <div class="text-center"><div class="text-2xl font-black text-gray-900" data-target="100">0</div><div class="text-gray-600">% رضا</div></div>
-                                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"من زمان وأنا أدور على فريق شغله متقن، الحمدلله لقيت النخبة. سووا ترميم للبيت القديم في البطحاء وأعادوه أحسن من الأول."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">ف</div>
+                            <div class="client-details">
+                                <h4>فهد الرشيد</h4>
+                                <p>حي البطحاء - الرياض</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"الشغل نظيف والتزام بالمواعيد نادر تلاقيه. في الربيع سووا لي لياسة القصر والنتيجة كانت تخطي التوقعات. أنصح فيهم الجميع."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">ن</div>
+                            <div class="client-details">
+                                <h4>ناصر الشمري</h4>
+                                <p>حي الربيع - الرياض</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"أنا من سكان الياسمين، جربت كثير شركات تشطيبات لكن النخبة مختلفين. الدقة في العمل والاهتمام بالتفاصيل الصغيرة ممتاز."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">ل</div>
+                            <div class="client-details">
+                                <h4>لولوة العتيبي</h4>
+                                <p>حي الياسمين - الرياض</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"فِي حي الصحافة عندي شقة، النخبة سووا لي تشطيب كامل في وقت قياسي والشغل أنيق ومرتب. الأسعار مناسبة للجودة اللي يقدمونها."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">خ</div>
+                            <div class="client-details">
+                                <h4>خالد المطيري</h4>
+                                <p>حي الصحافة - الرياض</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"في العليا سووا لي تشطيب مكتبي، ما توقعت النتيجة بتكون بهالجمال. المهنية والتواصل المستمر مع العملاء شيء مميز عندهم."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">م</div>
+                            <div class="client-details">
+                                <h4>محمد القحطاني</h4>
+                                <p>حي العليا - الرياض</p>
                             </div>
                         </div>
                     </div>
@@ -214,262 +1479,268 @@
         </div>
     </section>
 
-<!-- Services Section -->
-<section id="services" class="section-padding slant-bg">
-    <div class="container-custom">
-        <div class="text-center mb-20 reveal">
-            <h2 class="section-title center text-4xl md:text-5xl font-black text-gray-900">خدماتنا المتميزة</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">نقدم حلولاً متكاملة تتجاوز توقعاتك، مصممة خصيصاً لراحتك وأمان منزلك.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- 1. شفط وتنظيف البيارات -->
-            <div class="service-card reveal">
-                <img src="assets/sewage-truck-riyadh.webp" alt="وايت شفط بيارات بالرياض" class="w-full h-56 object-cover rounded-t-lg">
-                <div class="p-8 flex flex-col">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">شفط وتنظيف البيارات</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed text-center">نستخدم أحدث شاحنات الشفط لضمان تفريغ سريع وفعال للبيارات مع التخلص الآمن من المخلفات.</p>
-                    <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-4 self-center flex items-center gap-2">اطلب الخدمة <i class="fas fa-arrow-left"></i></button>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا الآن</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>اتصل بنا مباشرة</h3>
+                    <p class="contact-description">
+                        نحن جاهزون للرد على استفساراتكم وتقديم عروض أسعار مجانية. 
+                        اتصل بنا الآن للحصول على استشارة مجانية وتقييم لمشروعك.
+                    </p>
+                    
+                    <div class="contact-buttons">
+                        <a href="tel:+966542906096" class="contact-button phone-button">
+                            <i class="fas fa-phone button-icon"></i>
+                            اتصل بنا الآن: 0542906096
+                        </a>
+                        
+                        <a href="https://wa.me/966542906096" target="_blank" class="contact-button whatsapp-button">
+                            <i class="fab fa-whatsapp button-icon"></i>
+                            تواصل عبر واتساب
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-details">
+                    <h4>معلومات التواصل</h4>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <div>
+                            <p>الهاتف والواتساب</p>
+                            <a href="tel:+966542906096">+966 54 290 6096</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="icon">💬</span>
+                        <div>
+                            <p>الواتساب مباشر</p>
+                            <a href="https://wa.me/966542906096" target="_blank">
+                                اضغط للتواصل فوراً
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <p>الموقع الجغرافي</p>
+                            <p>الرياض - نغطي جميع الأحياء</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="icon">💼</span>
+                        <div>
+                            <p>خدماتنا</p>
+                            <p>لياسة، ترميم، تشطيبات فاخرة</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- 2. تسليك المجاري بالكمبروسر -->
-            <div class="service-card reveal" style="transition-delay: 200ms;">
-                <img src="assets/hydro-jetting-drain-cleaning.webp" alt="تسليك المجاري بضغط الماء العالي" class="w-full h-56 object-cover rounded-t-lg">
-                <div class="p-8 flex flex-col">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">تسليك المجاري بالكمبروسر</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed text-center">نحل أصعب الانسدادات باستخدام تقنية ضغط الماء العالي (الكمبروسر) دون أي أضرار لشبكة الصرف.</p>
-                    <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-4 self-center flex items-center gap-2">اطلب الخدمة <i class="fas fa-arrow-left"></i></button>
-                </div>
-            </div>
-
-            <!-- 3. تنظيف وتعقيم الخزانات -->
-            <div class="service-card reveal" style="transition-delay: 400ms;">
-                <img src="assets/water-tank-cleaning-riyadh.webp" alt="تنظيف وتعقيم خزانات المياه بالرياض" class="w-full h-56 object-cover rounded-t-lg">
-                <div class="p-8 flex flex-col">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">تنظيف وتعقيم الخزانات</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed text-center">نضمن لك مياه نقية وصحية عبر خدمة تنظيف وتعقيم الخزانات الأرضية والعلوية بأعلى معايير الجودة.</p>
-                    <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-4 self-center flex items-center gap-2">اطلب الخدمة <i class="fas fa-arrow-left"></i></button>
-                </div>
-            </div>
-
-            <!-- 4. سحب صفيات المطاعم -->
-            <div class="service-card reveal" style="transition-delay: 600ms;">
-                <img src="assets/grease-trap-cleaning.webp" alt="سحب وتنظيف صفيات المطاعم بالرياض" class="w-full h-56 object-cover rounded-t-lg">
-                <div class="p-8 flex flex-col">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">سحب صفيات المطاعم</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed text-center">خدمة متخصصة لسحب الزيوت والشحوم من مصائد الشحوم في المطابخ التجارية لضمان سير العمل.</p>
-                    <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-4 self-center flex items-center gap-2">اطلب الخدمة <i class="fas fa-arrow-left"></i></button>
-                </div>
-            </div>
-
-            <!-- 5. خدمات النظافة الشاملة (الصورة القديمة كما طلبت) -->
-            <div class="service-card reveal" style="transition-delay: 800ms;">
-                <img src="https://images.pexels.com/photos/4099469/pexels-photo-4099469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="خدمات نظافة شاملة بالرياض" class="w-full h-56 object-cover rounded-t-lg">
-                <div class="p-8 flex flex-col">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">خدمات النظافة الشاملة</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed text-center">نقدم خدمات نظافة شاملة للمنازل والمنشآت، بما في ذلك التعقيم بعد أعمال الصيانة لضمان بيئة صحية.</p>
-                    <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-4 self-center flex items-center gap-2">اطلب الخدمة <i class="fas fa-arrow-left"></i></button>
-                </div>
-            </div>
-
-            <!-- 6. كشف تسربات وصيانة -->
-            <div class="service-card reveal" style="transition-delay: 1000ms;">
-                <img src="assets/water-leak-detection-service.webp" alt="كشف تسربات المياه بدون تكسير" class="w-full h-56 object-cover rounded-t-lg">
-                <div class="p-8 flex flex-col">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">كشف تسربات وصيانة</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed text-center">نكتشف تسربات المياه بأحدث الأجهزة الإلكترونية ونقوم بجميع أعمال صيانة السباكة دون تكسير.</p>
-                    <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-4 self-center flex items-center gap-2">اطلب الخدمة <i class="fas fa-arrow-left"></i></button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <!-- Why Choose Us Section -->
-    <section class="section-padding feature-section">
-        <div class="container-custom feature-content">
-            <div class="text-center mb-20 reveal">
-                <h2 class="section-title center text-4xl md:text-5xl font-black text-gray-900">ليش حنا خيارك الأفضل؟</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">الجودة ما هي بخيار، هي أساس شغلنا. نلتزم بأعلى المعايير عشان نضمن راحتك.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div class="stats-card p-8 reveal"><div class="w-16 h-16 bg-primary-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 floating"><i class="fas fa-bolt text-3xl text-primary-gold"></i></div><h3 class="text-xl font-bold text-gray-900 mb-2">استجابة فورية 24/7</h3><p class="text-gray-600">نوصلك بأسرع وقت، لأننا خابرين أهمية الحالات الطارئة.</p></div>
-                <div class="stats-card p-8 reveal" style="transition-delay: 150ms;"><div class="w-16 h-16 bg-primary-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 floating"><i class="fas fa-award text-3xl text-primary-gold"></i></div><h3 class="text-xl font-bold text-gray-900 mb-2">فريق خبراء</h3><p class="text-gray-600">فنيين مدربين على أعلى مستوى، شغلهم يبيض الوجه.</p></div>
-                <div class="stats-card p-8 reveal" style="transition-delay: 300ms;"><div class="w-16 h-16 bg-primary-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 floating"><i class="fas fa-cogs text-3xl text-primary-gold"></i></div><h3 class="text-xl font-bold text-gray-900 mb-2">تقنيات حديثة</h3><p class="text-gray-600">نستخدم أجدد المعدات عشان نخلص الشغل بكفاءة ودقة.</p></div>
-                <div class="stats-card p-8 reveal" style="transition-delay: 450ms;"><div class="w-16 h-16 bg-primary-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 floating"><i class="fas fa-shield-alt text-3xl text-primary-gold"></i></div><h3 class="text-xl font-bold text-gray-900 mb-2">ضمان على الشغل</h3><p class="text-gray-600">نعطيك ضمان على خدماتنا لأننا واثقين من شغلنا.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coverage Section -->
-    <section id="coverage" class="section-padding pt-0">
-        <div class="container-custom">
-            <div class="text-center mb-16 reveal">
-                <h2 class="section-title center text-4xl md:text-5xl font-black text-gray-900">نغطي كل أحياء الرياض</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mt-6">وين ما كنت في الرياض، شمال، جنوب، شرق، أو غرب، فريقنا يجيك ويقدم خدمة سريعة وموثوقة.</p>
-            </div>
-            <div class="max-w-5xl mx-auto reveal">
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-4 text-gray-700">
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي الملقا</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي الياسمين</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي الصحافة</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي النرجس</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي الرمال</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي قرطبة</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي النسيم</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي النهضة</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي لبن</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي عرقة</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي السفارات</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي ظهرة نمار</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي الشفا</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي العزيزية</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي الدار البيضاء</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي بدر</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي العليا</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي الملز</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي السليمانية</span></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي المربع</span></div>
-                </div>
-                <div class="text-center mt-8 font-semibold text-lg"><p>... وغيرها من أحياء الرياض، نصلك وين ما كنت.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section-padding pt-0">
-        <div class="container-custom">
-            <div class="text-center mb-16 reveal">
-                <h2 class="section-title center text-4xl md:text-5xl font-black text-gray-900">شهادات نعتز فيها</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">آراء عملائنا هي الدافع ورا تميزنا المستمر.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card p-8 reveal"><i class="fas fa-quote-right text-3xl text-primary-gold mb-4"></i><p class="text-gray-700 mb-6 leading-relaxed">"ما قصّروا الشباب والله، فكّوا لي سدّة المطبخ اللي بهذلتنا في أقل من ساعة. شغلهم بطل وسريعين، الله يعطيهم العافية."</p><div class="flex items-center justify-between pt-4 border-t border-gray-100"><p class="font-bold text-gray-900 text-lg">أبو سليمان</p><p class="text-sm text-primary-gold">حي الصحافة</p></div></div>
-                <div class="testimonial-card p-8 reveal" style="transition-delay: 150ms;"><i class="fas fa-quote-right text-3xl text-primary-gold mb-4"></i><p class="text-gray-700 mb-6 leading-relaxed">"اتصلت عليهم عشان تنظيف الخزان الأرضي، وجوني في نفس اليوم. الفريق فاهم شغله صح، رجعوا الخزان كأنه جديد. شغل يبيض الوجه."</p><div class="flex items-center justify-between pt-4 border-t border-gray-100"><p class="font-bold text-gray-900 text-lg">أم محمد</p><p class="text-sm text-primary-gold">حي الياسمين</p></div></div>
-                <div class="testimonial-card p-8 reveal" style="transition-delay: 300ms;"><i class="fas fa-quote-right text-3xl text-primary-gold mb-4"></i><p class="text-gray-700 mb-6 leading-relaxed">"صراحة أفضل من تعاملت معه لشفط البيارة. مواعيدهم مضبوطة بالحيل وأسعارهم زينة. أنصح فيهم وبقوة."</p><div class="flex items-center justify-between pt-4 border-t border-gray-100"><p class="font-bold text-gray-900 text-lg">خالد العتيبي</p><p class="text-sm text-primary-gold">حي الرمال</p></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="bg-gray-900">
-        <div class="container-custom py-16 text-center">
-            <h2 class="text-4xl font-extrabold text-white mb-4">جاهز تجرب خدمة استثنائية؟</h2>
-            <p class="text-gray-300 text-xl max-w-2xl mx-auto mb-8">لا تخلي مشاكل الصرف الصحي تعكر مزاجك. الحل على بعد مكالمة.</p>
-            <button class="btn-primary px-10 py-4 rounded-xl text-2xl font-bold inline-block pulse-gold call-button">
-                <span class="flex items-center justify-center gap-3">
-                    <i class="fas fa-phone fa-fw"></i> اتصل بنا الحين
-                </span>
-            </button>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-border-light">
-        <div class="container-custom py-8 text-center text-gray-600">
-            <p class="mb-2">جميع الحقوق محفوظة &copy; <span id="copyright-year"></span> لـ كمبروسور.</p>
-            <p class="text-sm">بإدارة: أبو أحمد | شريكك الموثوق لخدمات الصرف الصحي في الرياض.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">النخبة للتشطيبات</div>
+            <p>متخصصون في التشطيبات والترميم الفاخر - نغطي جميع أحياء الرياض</p>
+            <div class="footer-contact">
+                <a href="tel:+966542906096">الهاتف: +966 54 290 6096</a>
+                <a href="https://wa.me/966542906096" target="_blank">الواتساب: اضغط هنا</a>
+            </div>
+            <p>نعمل في جميع أنحاء الرياض</p>
+            <p>&copy; 2024 النخبة للتشطيبات. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
-        
-        const phoneNumber = '+966576572402';
-        const phoneModal = document.getElementById('phoneModal');
-        const copyBtn = document.getElementById('copyBtn');
-        const closeModal = document.getElementById('closeModal');
-        const copySuccess = document.getElementById('copySuccess');
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
 
-        function showPhoneModal() {
-            phoneModal.style.display = 'flex';
-        }
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
 
-        function handleCall() {
-            // On mobile, initiate a call. On desktop, show the modal.
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                window.location.href = `tel:${phoneNumber}`;
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
             } else {
-                showPhoneModal();
+                navbar.classList.remove('scrolled');
             }
-        }
+        });
 
-        // Attach event listener to all call buttons
-        document.querySelectorAll('.call-button').forEach(btn => btn.addEventListener('click', handleCall));
-
-        // Modal functionality
-        copyBtn.addEventListener('click', function() {
-            navigator.clipboard.writeText(phoneNumber).then(function() {
-                copySuccess.style.display = 'block';
-                setTimeout(() => {
-                    copySuccess.style.display = 'none';
-                }, 2000);
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
-        closeModal.addEventListener('click', () => {
-            phoneModal.style.display = 'none';
+        // Track phone call clicks with Google Analytics
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                gtag('event', 'phone_call', {
+                    'event_category': 'Contact',
+                    'event_label': 'Phone Call Click',
+                    'value': this.href
+                });
+                console.log('تم النقر على رابط الهاتف: ' + this.href);
+            });
         });
 
-        phoneModal.addEventListener('click', (e) => {
-            if (e.target === phoneModal) {
-                phoneModal.style.display = 'none';
-            }
+        // Track WhatsApp clicks with Google Analytics
+        document.querySelectorAll('a[href*="whatsapp"]').forEach(link => {
+            link.addEventListener('click', function() {
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'WhatsApp Click'
+                });
+                console.log('تم النقر على رابط الواتساب');
+            });
         });
 
-        // Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; // Make elements appear sooner
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Initial check
+        // Track CTA button clicks with Google Analytics
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                gtag('event', 'cta_click', {
+                    'event_category': 'Conversion',
+                    'event_label': 'Request Free Quote'
+                });
+            });
+        });
 
-        // Animated Counters
-        function animateCounters() {
-            const counters = document.querySelectorAll('#stats [data-target]');
-            const speed = 200; // The lower the number, the faster the count
-
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const increment = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 10);
-                    } else {
-                        counter.innerText = target;
+        // Track gallery image clicks with Google Analytics
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const imgAlt = this.querySelector('img').alt;
+                gtag('event', 'gallery_click', {
+                    'event_category': 'Portfolio',
+                    'event_label': imgAlt
+                });
+                
+                const imgSrc = this.querySelector('img').src;
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.95);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 2000;
+                    cursor: pointer;
+                `;
+                
+                const modalImg = document.createElement('img');
+                modalImg.src = imgSrc;
+                modalImg.style.cssText = `
+                    max-width: 90%;
+                    max-height: 90%;
+                    object-fit: contain;
+                    border-radius: 10px;
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                `;
+                
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+                
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+                
+                // Close modal with ESC key
+                document.addEventListener('keydown', function closeModal(e) {
+                    if (e.key === 'Escape') {
+                        document.body.removeChild(modal);
+                        document.removeEventListener('keydown', closeModal);
                     }
-                };
-                updateCount();
+                });
             });
-        }
+        });
 
-        // Intersection Observer to trigger counter animation
-        const statsSection = document.getElementById('stats');
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target); // Animate only once
-                }
+        // Track form submission (if any)
+        const contactButtons = document.querySelectorAll('.contact-button');
+        contactButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const buttonType = this.classList.contains('phone-button') ? 'Phone' : 'WhatsApp';
+                gtag('event', 'contact_click', {
+                    'event_category': 'Contact',
+                    'event_label': buttonType + ' Contact'
+                });
             });
-        }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+        });
 
-        observer.observe(statsSection);
+        // Initialize on page load
+        window.addEventListener('load', () => {
+            // Track page view
+            gtag('event', 'page_view', {
+                'page_title': document.title,
+                'page_location': window.location.href
+            });
+            
+            // Add fade-in animation to sections on scroll
+            const sections = document.querySelectorAll('section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        
+                        // Track section view
+                        const sectionId = entry.target.id || 'unnamed_section';
+                        gtag('event', 'section_view', {
+                            'event_category': 'Engagement',
+                            'event_label': sectionId
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
 
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+        });
     </script>
 </body>
 </html>
