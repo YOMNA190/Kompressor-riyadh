@@ -90,7 +90,7 @@
           "provider": {
             "@type": "LocalBusiness",
             "name": "كمبروسور اكسبريس",
-            "telephone": "+966541828791",
+            "telephone": "+966579466115",
             "openingHours": "24/7",
             "priceRange": "$$",
             "address": {
@@ -122,10 +122,21 @@
           "logo": "https://compressor-express.com/logo.png",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+966541828791",
+            "telephone": "+966579466115",
             "contactType": "customer service",
             "areaServed": "SA",
             "availableLanguage": "Arabic"
+          }
+        },
+        {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "127",
+          "bestRating": "5",
+          "worstRating": "1",
+          "itemReviewed": {
+            "@type": "PlumbingService",
+            "name": "خدمات تسليك المجاري بالرياض"
           }
         }
       ]
@@ -137,7 +148,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-    <link rel="preload" as="image" href="assets/sewage-truck-riyadh.webp">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1621967299229-5c0c14b82b6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" crossorigin>
     
     <!-- Styles & Fonts -->
@@ -188,6 +199,24 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
+        }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(135deg,#dc2626,#ef4444);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            font-size: 0.875rem;
+        }
+
+        .emergency-banner a {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
         }
 
         /* Performance Optimizations */
@@ -263,7 +292,7 @@
         /* Navigation */
         .navbar {
             position: fixed;
-            top: 0;
+            top: 38px; /* Adjusted for emergency banner */
             left: 0;
             right: 0;
             background: rgba(255, 255, 255, 0.98);
@@ -337,6 +366,8 @@
             cursor: pointer;
             white-space: nowrap;
             font-size: 0.875rem;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         .nav-cta:hover {
@@ -466,6 +497,8 @@
             width: 100%;
             max-width: 300px;
             margin: 0 auto;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         @media (min-width: 768px) {
@@ -499,6 +532,8 @@
             width: 100%;
             max-width: 300px;
             margin: 0 auto;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         @media (min-width: 768px) {
@@ -569,6 +604,7 @@
             box-shadow: var(--shadow-lg);
             max-height: 400px;
             object-fit: cover;
+            aspect-ratio: 16/9;
         }
 
         /* Service Cards */
@@ -580,6 +616,8 @@
             border: 1px solid var(--gray-200);
             box-shadow: var(--shadow);
             height: 100%;
+            content-visibility: auto;
+            contain-intrinsic-size: 0 500px;
         }
 
         .service-card:hover {
@@ -592,6 +630,7 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            aspect-ratio: 16/9;
         }
 
         .service-content {
@@ -825,6 +864,8 @@
             gap: 0.5rem;
             width: 100%;
             max-width: 300px;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         @media (min-width: 768px) {
@@ -855,6 +896,8 @@
             border: 2px solid rgba(255, 255, 255, 0.3);
             width: 100%;
             max-width: 300px;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         @media (min-width: 768px) {
@@ -1017,8 +1060,8 @@
         }
 
         .social-link {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: var(--radius);
             display: flex;
@@ -1029,6 +1072,8 @@
             transition: var(--transition);
             border: none;
             cursor: pointer;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         .social-link:hover {
@@ -1116,8 +1161,8 @@
         }
 
         .float-btn {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1128,6 +1173,8 @@
             transition: var(--transition);
             border: none;
             cursor: pointer;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         .float-btn:hover {
@@ -1144,6 +1191,32 @@
 
         .float-btn i {
             font-size: 1.25rem;
+        }
+
+        /* WhatsApp Chat Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 998;
+        }
+
+        .whatsapp-chat {
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: var(--transition);
+        }
+
+        .whatsapp-chat:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
         }
 
         /* Modal */
@@ -1202,6 +1275,8 @@
             cursor: pointer;
             transition: var(--transition);
             z-index: 1;
+            min-height: 44px;
+            min-width: 44px;
         }
 
         .modal-close:hover {
@@ -1388,7 +1463,9 @@
             .modal,
             .social-links,
             .hero-cta,
-            .nav-cta {
+            .nav-cta,
+            .emergency-banner,
+            .whatsapp-widget {
                 display: none !important;
             }
             
@@ -1454,7 +1531,8 @@
 
         /* Safe Area Insets for Notch Phones */
         @supports (padding: max(0px)) {
-            .float-buttons {
+            .float-buttons,
+            .whatsapp-widget {
                 left: max(1rem, env(safe-area-inset-left));
                 bottom: max(1rem, env(safe-area-inset-bottom));
             }
@@ -1465,9 +1543,68 @@
                 padding-right: env(safe-area-inset-right);
             }
         }
+
+        /* Pricing Table */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .pricing-table th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: right;
+        }
+
+        .pricing-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .pricing-table tr:nth-child(even) {
+            background: var(--gray-50);
+        }
+
+        .pricing-table tr:hover {
+            background: var(--primary-light);
+        }
+
+        /* Related Cities Section */
+        .related-cities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .city-link {
+            background: var(--gray-100);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .city-link:hover {
+            background: var(--primary);
+            color: white;
+        }
     </style>
 </head>
 <body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        🚨 <strong>طوارئ تسليك مجاري</strong>: اتصل الآن على <a href="tel:+966579466115">+966 57 946 6115</a> - خدمة 24 ساعة في الرياض
+    </div>
+
     <!-- Breadcrumb Navigation -->
     <div class="breadcrumb">
         <a href="https://compressor-express.com/">الرئيسية</a>
@@ -1475,9 +1612,17 @@
         <span>تسليك مجاري بالرياض</span>
     </div>
 
+    <!-- WhatsApp Chat Widget -->
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/966579466115?text=مرحباً، أريد استشارة في تسليك مجاري" target="_blank" class="whatsapp-chat">
+            <i class="fab fa-whatsapp"></i>
+            استشارة مجانية
+        </a>
+    </div>
+
     <!-- Floating Buttons -->
     <div class="float-buttons">
-        <a href="https://wa.me/966541828791" target="_blank" class="float-btn whatsapp">
+        <a href="https://wa.me/966579466115" target="_blank" class="float-btn whatsapp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <button class="float-btn call" id="floatCallBtn">
@@ -1503,7 +1648,7 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-grid">
-                 <div class="hero-content">
+                <div class="hero-content">
                     <div class="hero-badge">
                         <i class="fas fa-bolt"></i>
                         خدمة 24/7
@@ -1541,14 +1686,61 @@
                     </div>
                 </div>
                 <div>
-                    <img src="assets/sewage-truck-riyadh.webp" alt="وايت شفط بيارات بالرياض لتسليك المجاري" class="hero-image lazy-load" loading="lazy" width="800" height="600">
+                    <img src="https://images.unsplash.com/photo-1621967299229-5c0c14b82b6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="وايت شفط بيارات بالرياض لتسليك المجاري" 
+                         class="hero-image lazy-load" 
+                         loading="lazy" 
+                         width="800" 
+                         height="600">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Pricing Table -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-heading optimized-heading section-title">أسعار خدمات التسليك في الرياض</h2>
+                <p class="section-description">أسعار واضحة وشفافة لجميع خدمات تسليك المجاري</p>
+            </div>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>الخدمة</th>
+                        <th>السعر</th>
+                        <th>الضمان</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>تسليك مجاري منزلية</strong><br><small>بالكمبروسر عالي الضغط</small></td>
+                        <td>250-400 ريال</td>
+                        <td>30 يوم</td>
+                    </tr>
+                    <tr>
+                        <td><strong>شفط بيارة</strong><br><small>تنظيف كامل للبيارة</small></td>
+                        <td>500-800 ريال</td>
+                        <td>شهرين</td>
+                    </tr>
+                    <tr>
+                        <td><strong>تسليك مجاري مطاعم</strong><br><small>تنظيف صفايات المطابخ</small></td>
+                        <td>350-600 ريال</td>
+                        <td>45 يوم</td>
+                    </tr>
+                    <tr>
+                        <td><strong>تنظيف مجاري بنايات</strong><br><small>مجاري سكنية وتجارية</small></td>
+                        <td>400-700 ريال</td>
+                        <td>60 يوم</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section id="services" class="section bg-gray-50">
+    <section id="services" class="section bg-white">
         <div class="container">
             <div class="section-header">
                 <h2 class="text-heading optimized-heading section-title">خدمات التسليك والتنظيف الشاملة</h2>
@@ -1560,10 +1752,12 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3">
                 <!-- Service 1 -->
                 <div class="service-card lazy-load">
-                    <picture>
-                        <source srcset="assets/hydro-jetting-drain-cleaning.webp" type="image/webp">
-                        <img src="assets/hydro-jetting-drain-cleaning.jpg" alt="تسليك مجاري منزلية بالرياض بضغط الماء" class="service-image" loading="lazy" width="400" height="300">
-                    </picture>
+                    <img src="https://images.unsplash.com/photo-1621967299229-5c0c14b82b6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="تسليك مجاري منزلية بالرياض بضغط الماء" 
+                         class="service-image" 
+                         loading="lazy" 
+                         width="400" 
+                         height="300">
                     <div class="service-content">
                         <h3 class="service-title">تسليك مجاري منزلية بالرياض</h3>
                         <p class="service-description">
@@ -1583,7 +1777,12 @@
 
                 <!-- Service 2 -->
                 <div class="service-card lazy-load">
-                    <img src="assets/sewage-truck-riyadh.webp" alt="وايت شفط بيارات بالرياض لتنظيف البيارات" class="service-image" loading="lazy" width="400" height="300">
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="وايت شفط بيارات بالرياض لتنظيف البيارات" 
+                         class="service-image" 
+                         loading="lazy" 
+                         width="400" 
+                         height="300">
                     <div class="service-content">
                         <h3 class="service-title">تسليك مجاري رئيسية وبيارات</h3>
                         <p class="service-description">
@@ -1603,7 +1802,12 @@
 
                 <!-- Service 3 -->
                 <div class="service-card lazy-load">
-                    <img src="assets/grease-trap-cleaning.webp" alt="سحب وتنظيف صفايات المطاعم بالرياض" class="service-image" loading="lazy" width="400" height="300">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="سحب وتنظيف صفايات المطاعم بالرياض" 
+                         class="service-image" 
+                         loading="lazy" 
+                         width="400" 
+                         height="300">
                     <div class="service-content">
                         <h3 class="service-title">تسليك مجاري مطاعم ومطابخ</h3>
                         <p class="service-description">
@@ -1623,7 +1827,12 @@
 
                 <!-- Service 4 -->
                 <div class="service-card lazy-load">
-                    <img src="https://images.pexels.com/photos/4099469/pexels-photo-4099469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="تنظيف مجاري البنايات السكنية في الرياض" class="service-image" loading="lazy" width="400" height="300">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="تنظيف مجاري البنايات السكنية في الرياض" 
+                         class="service-image" 
+                         loading="lazy" 
+                         width="400" 
+                         height="300">
                     <div class="service-content">
                         <h3 class="service-title">تنظيف مجاري البنايات السكنية</h3>
                         <p class="service-description">
@@ -1643,7 +1852,12 @@
 
                 <!-- Service 5 -->
                 <div class="service-card lazy-load">
-                    <img src="assets/water-tank-cleaning-riyadh.webp" alt="تنظيف وتعقيم خزانات المياه بالرياض" class="service-image" loading="lazy" width="400" height="300">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="تنظيف وتعقيم خزانات المياه بالرياض" 
+                         class="service-image" 
+                         loading="lazy" 
+                         width="400" 
+                         height="300">
                     <div class="service-content">
                         <h3 class="service-title">تنظيف وتطهير خزانات الصرف</h3>
                         <p class="service-description">
@@ -1663,7 +1877,12 @@
 
                 <!-- Service 6 -->
                 <div class="service-card lazy-load">
-                    <img src="assets/water-leak-detection-service.webp" alt="تنظيف مجاري بعد التسربات في الرياض" class="service-image" loading="lazy" width="400" height="300">
+                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="تنظيف مجاري بعد التسربات في الرياض" 
+                         class="service-image" 
+                         loading="lazy" 
+                         width="400" 
+                         height="300">
                     <div class="service-content">
                         <h3 class="service-title">تنظيف مجاري بعد التسربات</h3>
                         <p class="service-description">
@@ -1685,7 +1904,7 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="section">
+    <section class="section bg-gray-50">
         <div class="container">
             <div class="section-header">
                 <h2 class="text-heading optimized-heading section-title">لماذا نعتبر الأفضل في تسليك المجاري؟</h2>
@@ -1739,7 +1958,7 @@
     </section>
 
     <!-- Service Areas -->
-    <section id="areas" class="section bg-gray-50">
+    <section id="areas" class="section bg-white">
         <div class="container">
             <div class="section-header">
                 <h2 class="text-heading optimized-heading section-title">المناطق التي نخدمها في الرياض</h2>
@@ -1771,8 +1990,25 @@
         </div>
     </section>
 
+    <!-- Related Cities -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="text-heading section-title">خدماتنا في المدن القريبة من الرياض</h3>
+            </div>
+            <div class="related-cities">
+                <a href="/تسليك-مجاري-الخرج" class="city-link">تسليك مجاري الخرج</a>
+                <a href="/تسليك-مجاري-ضرما" class="city-link">تسليك مجاري ضرما</a>
+                <a href="/تسليك-مجاري-المزاحمية" class="city-link">تسليك مجاري المزاحمية</a>
+                <a href="/تسليك-مجاري-الدوادمي" class="city-link">تسليك مجاري الدوادمي</a>
+                <a href="/تسليك-مجاري-الزلفي" class="city-link">تسليك مجاري الزلفي</a>
+                <a href="/تسليك-مجاري-الغاط" class="city-link">تسليك مجاري الغاط</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
-    <section class="section">
+    <section class="section bg-white">
         <div class="container">
             <div class="section-header">
                 <h2 class="text-heading optimized-heading section-title">آراء عملائنا في خدمات التسليك</h2>
@@ -1831,7 +2067,17 @@
                 <h2 class="text-heading optimized-heading section-title">الأسئلة الشائعة عن التسليك والتنظيف</h2>
             </div>
             
-            <div class="max-w-3xl mx-auto">
+            <div class="max-w-3xl mx-auto" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-question" itemprop="name">
+                        كم سعر تسليك مجاري في الرياض؟
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">يبدأ سعر تسليك المجاري المنزلية من <strong>250 ريال</strong> ويصل إلى <strong>800 ريال</strong> للمجاري الرئيسية والبيارات الكبيرة. نقدم أفضل أسعار في الرياض مع ضمان الخدمة.</p>
+                    </div>
+                </div>
+                
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <h3 class="faq-question" itemprop="name">
                         كم تستغرق عملية تسليك المجاري؟
@@ -1918,6 +2164,15 @@
                     </table>
                 </div>
 
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-primary">شركة تسليك مجاري الرياض | أفضل أسعار وعروض</h3>
+                <p class="mb-4">نحن في <strong>كمبروسور اكسبريس</strong> نقدم أفضل خدمات تسليك المجاري في الرياض بأحدث المعدات وأفضل الأسعار. لدينا فريق متخصص في:</p>
+                <ul class="list-disc pr-5 mb-6 space-y-2">
+                    <li><strong>تسليك مجاري منزلية بالرياض:</strong> حلول سريعة لانسداد الحمامات والمطابخ</li>
+                    <li><strong>تسليك مجاري مطاعم:</strong> تنظيف متخصص لصفايات المطابخ التجارية</li>
+                    <li><strong>شفط بيارات بالرياض:</strong> باستخدام وايت شفط بيارات متطور</li>
+                    <li><strong>تنظيف مجاري شامل:</strong> تعقيم وتطهير كامل لشبكات الصرف</li>
+                </ul>
+
                 <h3 class="text-2xl font-bold mt-8 mb-4 text-primary">خطوات عمل شركة تسليك مجاري محترفة في الرياض</h3>
                 <p class="mb-4">عندما تتصل بـ <strong>شركة تسليك مجاري بالرياض</strong> مثل كمبروسور اكسبريس، تمر العملية بهذه الخطوات:</p>
                 <ol class="list-decimal pr-5 mb-6 space-y-3">
@@ -1959,7 +2214,7 @@
                         اتصل الآن للتسليك
                     </button>
                     
-                    <a href="https://wa.me/966541828791" target="_blank" class="btn-outline-white">
+                    <a href="https://wa.me/966579466115" target="_blank" class="btn-outline-white">
                         <i class="fab fa-whatsapp"></i>
                         واتساب فوري للتسليك
                     </a>
@@ -1983,7 +2238,7 @@
                     </p>
                     
                     <div class="social-links">
-                        <a href="https://wa.me/966541828791" target="_blank" class="social-link">
+                        <a href="https://wa.me/966579466115" target="_blank" class="social-link">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                         <button class="social-link call-footer">
@@ -2008,7 +2263,7 @@
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
-                                <span class="phone-number">+966 54 182 8791</span>
+                                <span class="phone-number">+966 57 946 6115</span>
                                 <p>خدمة تسليك 24/7</p>
                             </div>
                         </div>
@@ -2044,11 +2299,11 @@
                 <p class="modal-description">خدمة تسليك مجاري على مدار الساعة</p>
                 
                 <div class="phone-display" id="displayPhone">
-                    +966 54 182 8791
+                    +966 57 946 6115
                 </div>
                 
                 <div class="modal-buttons">
-                    <a href="tel:+966541828791" class="btn-primary w-full text-center">
+                    <a href="tel:+966579466115" class="btn-primary w-full text-center">
                         <i class="fas fa-phone"></i> اتصال مباشر للتسليك
                     </a>
                     
@@ -2070,8 +2325,8 @@
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
         // Phone number
-        const phoneNumber = '+966 54 182 8791';
-        const cleanPhoneNumber = '+966541828791';
+        const phoneNumber = '+966 57 946 6115';
+        const cleanPhoneNumber = '+966579466115';
         
         // Modal elements
         const phoneModal = document.getElementById('phoneModal');
@@ -2091,12 +2346,28 @@
             }
         }
         
+        // Configure Google Analytics for phone conversions
+        if (typeof gtag !== 'undefined') {
+            gtag('config', 'AW-17822392392', {
+                'phone_conversion_number': cleanPhoneNumber
+            });
+        }
+        
         // Show phone modal
         function showPhoneModal() {
             displayPhone.textContent = phoneNumber;
             phoneModal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
             trackEvent('Contact', 'Modal Open', 'Phone Modal');
+            
+            // Track conversion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17822392392',
+                    'value': 1.0,
+                    'currency': 'SAR'
+                });
+            }
         }
         
         // Close modal
@@ -2108,6 +2379,15 @@
         // Handle phone call
         function handlePhoneCall() {
             trackEvent('Contact', 'Call Button Click', 'General Call');
+            
+            // Track phone call conversion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_call', {
+                    'phone_number': cleanPhoneNumber,
+                    'send_to': 'AW-17822392392'
+                });
+            }
+            
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 window.location.href = `tel:${cleanPhoneNumber}`;
             } else {
@@ -2180,14 +2460,19 @@
                             const target = parseInt(stat.getAttribute('data-count'));
                             let current = 0;
                             const increment = target / 50;
-                            const timer = setInterval(() => {
+                            
+                            function updateCounter() {
                                 current += increment;
                                 if (current >= target) {
-                                    clearInterval(timer);
                                     current = target;
+                                    stat.textContent = Math.floor(current);
+                                } else {
+                                    stat.textContent = Math.floor(current);
+                                    requestAnimationFrame(updateCounter);
                                 }
-                                stat.textContent = Math.floor(current);
-                            }, 30);
+                            }
+                            
+                            requestAnimationFrame(updateCounter);
                         });
                         trackEvent('Engagement', 'Stats Viewed', 'Hero Section');
                         observer.unobserve(entry.target);
@@ -2195,7 +2480,7 @@
                 });
             }, { threshold: 0.3 });
             
-            observer.observe(heroSection);
+            if (heroSection) observer.observe(heroSection);
         }
         
         // FAQ functionality
@@ -2298,6 +2583,21 @@
                 const timeSpent = Math.round((Date.now() - startTime) / 1000);
                 trackEvent('Engagement', 'Time Spent', `${timeSpent} seconds`);
             });
+            
+            // Add touch feedback for mobile devices
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('button, a').forEach(el => {
+                    el.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    el.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 150);
+                    });
+                });
+            }
         });
         
         // Escape key to close modal
@@ -2307,19 +2607,13 @@
             }
         });
         
-        // Touch device optimizations
-        if ('ontouchstart' in window) {
-            // Add touch feedback for buttons
-            document.querySelectorAll('button, a').forEach(el => {
-                el.addEventListener('touchstart', function() {
-                    this.classList.add('touch-active');
-                });
-                
-                el.addEventListener('touchend', function() {
-                    this.classList.remove('touch-active');
-                });
+        // Image error handling
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.src = 'https://images.unsplash.com/photo-1621967299229-5c0c14b82b6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80';
+                this.alt = 'تسليك مجاري بالرياض - خدمة احترافية';
             });
-        }
+        });
     </script>
 </body>
 </html>
