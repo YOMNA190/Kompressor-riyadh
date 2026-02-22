@@ -2,10 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسليك مجاري بالرياض | تنظيف مجاري - شركة النخبة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>تسليك مجاري بالرياض - شركة النخبة | خدمة 24 ساعة</title>
     
-    <!-- Google tag (gtag.js) - Google Ads Remarketing -->
+    <!-- Google tag (gtag.js) - Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17962928995"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,1131 +14,244 @@
         gtag('config', 'AW-17962928995');
     </script>
     
-    <!-- Event snippet for جهة اتصال conversion page -->
+    <!-- Conversion Tracking -->
     <script>
         function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    window.location = url;
-                }
-            };
             gtag('event', 'conversion', {
                 'send_to': 'AW-17962928995/nuJ0CILs9_sbEOOWsvVC',
-                'event_callback': callback
+                'event_callback': function() {
+                    if (typeof(url) != 'undefined' && url !== '#') {
+                        window.location = url;
+                    }
+                }
             });
             return false;
         }
         
-        // دالة مخصصة للاتصال الهاتفي مع تتبع التحويل
-        function trackCall(phoneNumber) {
-            gtag_report_conversion(`tel:${phoneNumber}`);
-            return true;
+        function trackCall(phone) {
+            gtag_report_conversion(`tel:${phone}`);
+            setTimeout(function() {
+                window.location = `tel:${phone}`;
+            }, 300);
+            return false;
         }
         
-        // دالة مخصصة لواتساب مع تتبع التحويل
-        function trackWhatsApp(whatsappNumber) {
-            gtag_report_conversion(`https://wa.me/${whatsappNumber}`);
-            return true;
+        function trackWhatsApp(number) {
+            gtag_report_conversion(`https://wa.me/${number}`);
+            setTimeout(function() {
+                window.location = `https://wa.me/${number}`;
+            }, 300);
+            return false;
         }
     </script>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="خدمات تسليك مجاري وتنظيف مجاري بالرياض بأحدث المعدات. خدمة 24 ساعة، فنيون متخصصون، أسعار مناسبة.">
-    <meta name="keywords" content="تسليك مجاري, تنظيف مجاري, الرياض, تسليك بالكمبروسر, شفط بالكمبروسر">
+    <meta name="description" content="شركة النخبة لتسليك المجاري بالرياض - خدمة فورية 24 ساعة باحدث معدات الكمبروسور. فنيون متخصصون، ضمان الجودة، أسعار تنافسية. اتصل الآن 0541828791">
+    <meta name="keywords" content="تسليك مجاري بالرياض, تسليك مجاري, شفط مجاري, تنظيف مجاري, كمبروسور مجاري, تسليك بيارات, سباك بالرياض">
+    <meta name="author" content="شركة النخبة لتسليك المجاري">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="Arabic">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="شركة النخبة لتسليك المجاري بالرياض - خدمة 24 ساعة">
+    <meta property="og:description" content="خدمة تسليك مجاري فورية بالرياض بأحدث معدات الكمبروسور. فنيون متخصصون على مدار الساعة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com">
+    <meta property="og:image" content="https://www.example.com/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.example.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">
     
+    <!-- Critical CSS Inline -->
     <style>
-        :root {
-            --primary: #0A3D62;
-            --secondary: #1B9CFC;
-            --accent: #FF9F1A;
-            --dark: #1A1A2E;
-            --light: #FFFFFF;
-            --gray-100: #F8F9FA;
-            --gray-200: #E9ECEF;
-            --gray-600: #6C757D;
-            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-            --gradient-accent: linear-gradient(135deg, var(--accent), #FF6B6B);
-            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.15);
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --radius: 12px;
-            --radius-lg: 20px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-            background: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        /* Header Styles */
-        .emergency-bar {
-            background: var(--gradient-accent);
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .emergency-bar a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-
-        .emergency-bar a:hover {
-            transform: translateY(-2px);
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 40px;
-            z-index: 999;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .header.scrolled {
-            box-shadow: var(--shadow);
-            top: 0;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            transition: var(--transition);
-        }
-
-        .logo:hover .logo-icon {
-            transform: rotate(-10deg) scale(1.1);
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-text .company {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1.2;
-        }
-
-        .logo-text .tagline {
-            font-size: 12px;
-            color: var(--gray-600);
-            font-weight: 500;
-        }
-
-        .nav-cta {
-            background: var(--gradient);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(10, 61, 98, 0.2);
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(10, 61, 98, 0.3);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(10, 61, 98, 0.05) 0%, rgba(27, 156, 252, 0.05) 100%);
-            padding: 100px 0 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(27, 156, 252, 0.1) 0%, transparent 70%);
-            z-index: 0;
-        }
-
-        .hero-container {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content {
-            padding-left: 20px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 159, 26, 0.1);
-            color: var(--accent);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            border: 2px solid rgba(255, 159, 26, 0.2);
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-
-        .hero-title span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--gray-600);
-            margin-bottom: 40px;
-            max-width: 500px;
-        }
-
-        .hero-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .feature-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--gradient);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 16px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--gradient);
-            color: white;
-            box-shadow: 0 4px 15px rgba(10, 61, 98, 0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(10, 61, 98, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* WhatsApp Button */
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
-        }
-
-        .btn-whatsapp:hover {
-            background: #128C7E;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-        }
-
-        /* Call Button */
-        .btn-call {
-            background: #FF9F1A;
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 159, 26, 0.2);
-        }
-
-        .btn-call:hover {
-            background: #E68A00;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 159, 26, 0.3);
-        }
-
-        .hero-image {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            transform: perspective(1000px) rotateY(-10deg);
-            transition: var(--transition);
-        }
-
-        .hero-image:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: var(--radius-lg);
-        }
-
-        /* Services Section - Updated for Drain Cleaning Only */
-        .services {
-            background: var(--gray-100);
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-subtitle {
-            color: var(--secondary);
-            font-weight: 600;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .section-description {
-            color: var(--gray-600);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--gradient);
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-card:hover::before {
-            height: 100%;
-            opacity: 0.05;
-        }
-
-        .service-image {
-            height: 220px;
-            overflow: hidden;
-        }
-
-        .service-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .service-card:hover .service-image img {
-            transform: scale(1.1);
-        }
-
-        .service-content {
-            padding: 30px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .service-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        .service-features {
-            list-style: none;
-            margin-bottom: 25px;
-        }
-
-        .service-features li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            color: var(--gray-600);
-        }
-
-        .service-features li i {
-            color: var(--accent);
-        }
-
-        .service-link {
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-
-        .service-link:hover {
-            gap: 15px;
-            color: var(--primary);
-        }
-
-        /* Why Choose Us Section - Added */
-        .why-us {
-            background: var(--primary);
-            color: white;
-            position: relative;
-        }
-
-        .why-us .section-title {
-            color: white;
-        }
-
-        .why-us .section-description {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .feature-icon-large {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 32px;
-        }
-
-        .feature-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .feature-description {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.95rem;
-        }
-
-        /* Testimonials Section - Improved */
-        .testimonials {
-            background: var(--gray-100);
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            padding: 20px 0;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            border: 1px solid var(--gray-200);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .testimonial-rating {
-            color: var(--accent);
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .testimonial-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            color: var(--gray-600);
-            position: relative;
-            padding-right: 20px;
-            min-height: 120px;
-        }
-
-        .testimonial-text::before {
-            content: '"';
-            font-size: 4rem;
-            color: var(--gray-200);
-            position: absolute;
-            top: -20px;
-            right: -10px;
-            font-family: Georgia, serif;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .author-info h4 {
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: var(--primary);
-        }
-
-        .author-info p {
-            color: var(--gray-600);
-            font-size: 0.9rem;
-        }
-
-        /* Districts Section */
-        .districts {
-            background: white;
-        }
-
-        .districts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .district-card {
-            background: var(--gray-100);
-            border-radius: var(--radius);
-            padding: 25px;
-            text-align: center;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            border: 2px solid transparent;
-        }
-
-        .district-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .district-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 24px;
-            transition: var(--transition);
-        }
-
-        .district-card:hover .district-icon {
-            transform: rotate(15deg) scale(1.1);
-        }
-
-        .district-name {
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .district-services {
-            color: var(--gray-600);
-            font-size: 0.9rem;
-        }
-
-        /* Action Buttons - Fixed to screen */
-        .action-buttons {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .action-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .action-btn:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .action-btn.whatsapp {
-            background: #25D366;
-            color: white;
-        }
-
-        .action-btn.call {
-            background: #FF9F1A;
-            color: white;
-        }
-
-        .action-btn i {
-            font-size: 24px;
-        }
-
-        .action-btn .badge {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background: #FF4757;
-            color: white;
-            font-size: 12px;
-            padding: 4px 8px;
-            border-radius: 10px;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        /* Equipment Section - Added */
-        .equipment {
-            background: var(--gray-100);
-        }
-
-        .equipment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .equipment-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .equipment-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .equipment-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 32px;
-            color: white;
-        }
-
-        .equipment-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        .equipment-description {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--gradient);
-            color: white;
-            border-radius: var(--radius-lg);
-            padding: 80px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin: 0 20px;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .cta-description {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-white {
-            background: white;
-            color: var(--primary);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-white:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-        }
-
+        /* Critical CSS - Above the fold */
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'IBM Plex Sans Arabic',sans-serif}
+        :root{--primary:#0A3D62;--secondary:#1B9CFC;--accent:#FF9F1A;--dark:#1A1A2E;--light:#FFFFFF;--gray-100:#F8F9FA;--gradient:linear-gradient(135deg,#0A3D62,#1B9CFC)}
+        body{background:var(--light);color:var(--dark);line-height:1.5}
+        .container{max-width:1200px;margin:0 auto;padding:0 16px}
+        .emergency-bar{background:#FF9F1A;color:white;padding:8px 0;text-align:center;position:sticky;top:0;z-index:1000}
+        .emergency-bar a{color:white;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+        .header{background:white;position:sticky;top:38px;z-index:999;border-bottom:1px solid #eee}
+        .nav-container{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+        .logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+        .logo-icon{width:40px;height:40px;background:var(--gradient);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white}
+        .logo-text .company{font-size:20px;font-weight:700;color:var(--primary)}
+        .nav-cta{background:var(--gradient);color:white;padding:8px 20px;border-radius:50px;text-decoration:none;font-weight:600;font-size:14px}
+        .hero{background:var(--gray-100);padding:40px 0;text-align:center}
+        .hero h1{font-size:28px;color:var(--primary);margin-bottom:16px}
+        .hero .phone-number{font-size:32px;font-weight:800;color:var(--accent);text-decoration:none;display:block;margin:16px 0}
+        .btn{display:inline-block;padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:600;margin:4px}
+        .btn-call{background:#FF9F1A;color:white}
+        .btn-whatsapp{background:#25D366;color:white}
+        @media (min-width:768px){.hero h1{font-size:48px}.hero .phone-number{font-size:48px}}
+    </style>
+    
+    <!-- Structured Data - LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "شركة النخبة لتسليك المجاري",
+        "description": "متخصصون في تسليك وتنظيف المجاري بالرياض بأحدث معدات الكمبروسور",
+        "url": "https://www.example.com",
+        "telephone": "+966541828791",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "الرياض",
+            "addressCountry": "SA"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 24.7136,
+            "longitude": 46.6753
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "00:00",
+                "closes": "23:59"
+            }
+        ],
+        "sameAs": [
+            "https://wa.me/966541828791"
+        ],
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "الرياض"
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "خدمات تسليك المجاري",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "تسليك مجاري منزلية"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "شفط مجاري بالكمبروسور"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "تسليك مجاري تجارية"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "150"
+        }
+    }
+    </script>
+    
+    <!-- Full CSS -->
+    <style>
+        /* Full CSS - Non-critical */
+        .section{padding:60px 0}
+        .section-header{text-align:center;margin-bottom:40px}
+        .section-title{font-size:28px;font-weight:700;color:var(--primary);margin-bottom:12px}
+        .services-grid,.features-grid,.equipment-grid,.districts-grid,.testimonial-grid{display:grid;gap:20px;margin-top:30px}
+        
+        /* Cards */
+        .service-card,.feature-card,.equipment-card,.district-card,.testimonial-card{background:white;border-radius:20px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.08);transition:transform 0.3s}
+        .service-card:hover,.district-card:hover{transform:translateY(-5px)}
+        .service-icon{width:50px;height:50px;background:var(--gradient);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;margin-bottom:16px}
+        .service-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:12px}
+        .service-features{list-style:none}
+        .service-features li{display:flex;align-items:center;gap:8px;margin-bottom:8px;color:#666}
+        .service-features i{color:var(--accent)}
+        
+        /* Why Us */
+        .why-us{background:var(--primary);color:white}
+        .why-us .section-title{color:white}
+        .feature-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);text-align:center}
+        .feature-icon-large{width:70px;height:70px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px}
+        
+        /* Equipment */
+        .equipment{background:var(--gray-100)}
+        .equipment-card{text-align:center}
+        .equipment-icon{width:70px;height:70px;background:var(--gradient);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:white;font-size:28px}
+        
+        /* Districts */
+        .district-card{text-align:center}
+        .district-icon{width:60px;height:60px;background:var(--gradient);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:white}
+        
+        /* Testimonials */
+        .testimonials{background:var(--gray-100)}
+        .testimonial-rating{color:var(--accent);margin-bottom:12px}
+        .testimonial-text{color:#666;margin-bottom:20px;position:relative;padding-right:16px}
+        .testimonial-author{display:flex;align-items:center;gap:12px}
+        .author-avatar{width:50px;height:50px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+        
+        /* CTA */
+        .cta-section{background:var(--gradient);color:white;border-radius:20px;padding:40px 20px;text-align:center}
+        
         /* Footer */
-        .footer {
-            background: var(--dark);
-            color: white;
-            padding: 80px 0 30px;
+        .footer{background:var(--dark);color:white;padding:60px 0 30px}
+        .footer-grid{display:grid;gap:30px;margin-bottom:40px}
+        .footer-links{list-style:none}
+        .footer-links a{color:rgba(255,255,255,0.7);text-decoration:none;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+        .contact-info{list-style:none}
+        .contact-info li{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+        .footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1)}
+        
+        /* Responsive */
+        @media (min-width:640px){
+            .services-grid,.features-grid,.equipment-grid,.testimonial-grid{grid-template-columns:repeat(2,1fr)}
+            .districts-grid{grid-template-columns:repeat(3,1fr)}
         }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
+        @media (min-width:1024px){
+            .services-grid{grid-template-columns:repeat(3,1fr)}
+            .features-grid,.equipment-grid,.testimonial-grid{grid-template-columns:repeat(4,1fr)}
+            .districts-grid{grid-template-columns:repeat(4,1fr)}
+            .footer-grid{grid-template-columns:repeat(3,1fr)}
         }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .footer-logo .logo-icon {
-            width: 40px;
-            height: 40px;
-            font-size: 20px;
-        }
-
-        .footer-about {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        .footer-heading {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-heading::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--accent);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-            padding-right: 10px;
-        }
-
-        .contact-info {
-            list-style: none;
-        }
-
-        .contact-info li {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .contact-info li i {
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        /* Animation Classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-content {
-                padding-left: 0;
-            }
-
-            .hero-features {
-                justify-content: center;
-            }
-
-            .hero-image {
-                transform: none;
-            }
-
-            .hero-image:hover {
-                transform: none;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .districts-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .equipment-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .action-buttons {
-                left: 20px;
-                bottom: 20px;
-            }
-
-            .action-btn {
-                width: 50px;
-                height: 50px;
-            }
-
-            .action-btn i {
-                font-size: 20px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .districts-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-section {
-                padding: 60px 20px;
-                margin: 0;
-            }
-
-            .cta-title {
-                font-size: 2rem;
-            }
-
-            .action-buttons {
-                left: 15px;
-                bottom: 15px;
-                gap: 10px;
-            }
-
-            .action-btn {
-                width: 45px;
-                height: 45px;
-            }
-
-            .action-btn i {
-                font-size: 18px;
-            }
-        }
+        
+        /* Utility */
+        .text-center{text-align:center}
+        .mb-4{margin-bottom:16px}
+        .mt-4{margin-top:16px}
+        .btn{display:inline-block;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:600;transition:all 0.3s}
+        .btn:hover{transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,0,0,0.2)}
+        
+        /* Performance */
+        img{max-width:100%;height:auto;display:block}
+        .lazy{background:#f0f0f0}
     </style>
 </head>
 <body>
-    <!-- Emergency Bar -->
+    <!-- Emergency Bar - Direct phone link for accessibility -->
     <div class="emergency-bar">
         <div class="container">
-            <a href="#" onclick="trackCall('966541828791'); return false;">
-                <i class="fas fa-phone"></i>
+            <a href="tel:+966541828791" onclick="trackCall('966541828791'); return true;">
+                <i class="fas fa-phone" aria-hidden="true"></i>
                 <span>طوارئ 24 ساعة: 0541828791</span>
-                <i class="fas fa-bolt"></i>
+                <i class="fas fa-bolt" aria-hidden="true"></i>
             </a>
         </div>
     </div>
@@ -1147,17 +260,16 @@
     <header class="header">
         <div class="container">
             <div class="nav-container">
-                <a href="#" class="logo">
-                    <div class="logo-icon">
+                <a href="/" class="logo" aria-label="الرئيسية">
+                    <div class="logo-icon" aria-hidden="true">
                         <i class="fas fa-water"></i>
                     </div>
                     <div class="logo-text">
                         <span class="company">شركة النخبة</span>
-                        <span class="tagline">لتسليك المجاري والتنظيف</span>
                     </div>
                 </a>
-                <a href="#" onclick="trackCall('966541828791'); return false;" class="nav-cta">
-                    <i class="fas fa-phone"></i>
+                <a href="tel:+966541828791" class="nav-cta" onclick="trackCall('966541828791'); return true;">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
                     طلب خدمة فورية
                 </a>
             </div>
@@ -1166,469 +278,264 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-content fade-in">
-                <div class="hero-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    خدمة موثوقة منذ 2010
-                </div>
-                <h1 class="hero-title">
-                    تخصصنا <span>تسليك المجاري</span> <br> والتنظيف
-                </h1>
-                <p class="hero-description">
-                    نحن متخصصون في خدمات تسليك المجاري والتنظيف بالكمبروسور فقط. نستخدم أحدث معدات الكمبروسور ونتقن عملنا بدقة واحترافية.
-                </p>
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <span>خدمة 24/7</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-compress"></i>
-                        </div>
-                        <span>كمبروسور متخصص</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <span>فنيون متخصصون</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <span>ضمان الجودة</span>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#" onclick="trackCall('966541828791'); return false;" class="btn btn-call">
-                        <i class="fas fa-phone"></i>
-                        اتصل الآن
-                    </a>
-                    <a href="#" onclick="trackWhatsApp('966541828791'); return false;" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        واتساب
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
-                        <i class="fas fa-list"></i>
-                        خدماتنا
-                    </a>
-                </div>
+        <div class="container">
+            <h1>تسليك مجاري بالرياض<br><span style="color:var(--secondary)">فوري 24 ساعة</span></h1>
+            <p style="font-size:18px;margin-bottom:20px;color:#666">متخصصون في تسليك المجاري بالكمبروسور - خدمة سريعة بضمان الجودة</p>
+            
+            <!-- Direct phone link for Googlebot and users -->
+            <a href="tel:+966541828791" class="phone-number" onclick="trackCall('966541828791'); return true;">
+                0541828791
+            </a>
+            
+            <div style="margin-top:24px">
+                <a href="tel:+966541828791" class="btn btn-call" onclick="trackCall('966541828791'); return true;">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    اتصل الآن
+                </a>
+                <a href="https://wa.me/966541828791" class="btn btn-whatsapp" onclick="trackWhatsApp('966541828791'); return true;">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    واتساب
+                </a>
             </div>
-            <div class="hero-image fade-in">
-                <img src="assets/hydro-jetting-drain-cleaning.webp" alt="خدمات تسليك المجاري بالكمبروسور">
+            
+            <!-- Trust badges -->
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:40px">
+                <div><i class="fas fa-clock" style="color:var(--accent)"></i> خدمة 24/7</div>
+                <div><i class="fas fa-compress" style="color:var(--accent)"></i> كمبروسور متطور</div>
+                <div><i class="fas fa-user-tie" style="color:var(--accent)"></i> فنيون متخصصون</div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section - Only Drain Cleaning Services -->
-    <section id="services" class="section services">
+    <!-- Services Section -->
+    <section class="section" aria-labelledby="services-title">
         <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-subtitle">تخصصنا الوحيد</p>
-                <h2 class="section-title">خدمات تسليك المجاري والتنظيف</h2>
-                <p class="section-description">نحن نركز على ما نتقنه - تسليك المجاري والتنظيف بالكمبروسور باحترافية عالية</p>
+            <div class="section-header">
+                <h2 id="services-title" class="section-title">خدماتنا المتخصصة</h2>
+                <p>نحن متخصصون فقط في تسليك وتنظيف المجاري</p>
             </div>
+            
             <div class="services-grid">
                 <!-- Service 1 -->
-                <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="assets/hydro-jetting-drain-cleaning.webp" alt="تسليك مجاري منزلية">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fas fa-home"></i>
                     </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3 class="service-title">تسليك المجاري المنزلية</h3>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> تسليك مجاري المنازل والشقق</li>
-                            <li><i class="fas fa-check"></i> حل مشاكل انسداد الحمامات</li>
-                            <li><i class="fas fa-check"></i> تنظيف مواسير الصرف الصحي</li>
-                            <li><i class="fas fa-check"></i> إصلاح تسربات المجاري</li>
-                        </ul>
-                        <a href="#" onclick="trackCall('966541828791'); return false;" class="service-link">
-                            اطلب الخدمة
-                            <i class="fas fa-arrow-left"></i>
-                        </a>
-                    </div>
-                </div>
+                    <h3 class="service-title">تسليك مجاري منزلية</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> تسليك مجاري الفلل والشقق</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> حل انسدادات الحمامات والمطابخ</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> تنظيف مواسير الصرف الصحي</li>
+                    </ul>
+                    <a href="tel:+966541828791" class="btn btn-call" style="margin-top:16px;display:inline-block" onclick="trackCall('966541828791'); return true;">
+                        اطلب الخدمة
+                    </a>
+                </article>
 
-                <!-- Service 2 - تم التعديل إلى شفط المجاري بالكمبروسور -->
-                <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="assets/sewage-truck-riyadh.webp" alt="شفط المجاري بالكمبروسور">
+                <!-- Service 2 -->
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fas fa-compress"></i>
                     </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-compress"></i>
-                        </div>
-                        <h3 class="service-title">شفط المجاري بالكمبروسور</h3>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> شفط المجاري بالضغط العالي</li>
-                            <li><i class="fas fa-check"></i> إزالة الانسدادات العنيدة</li>
-                            <li><i class="fas fa-check"></i> تنظيف خطوط الصرف الرئيسية</li>
-                            <li><i class="fas fa-check"></i> صيانة دورية للمجاري</li>
-                        </ul>
-                        <a href="#" onclick="trackCall('966541828791'); return false;" class="service-link">
-                            اطلب الخدمة
-                            <i class="fas fa-arrow-left"></i>
-                        </a>
-                    </div>
-                </div>
+                    <h3 class="service-title">شفط بالكمبروسور</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> شفط المجاري بالضغط العالي</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> إزالة الانسدادات العنيدة</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> تنظيف خطوط الصرف الرئيسية</li>
+                    </ul>
+                    <a href="tel:+966541828791" class="btn btn-call" style="margin-top:16px;display:inline-block" onclick="trackCall('966541828791'); return true;">
+                        اطلب الخدمة
+                    </a>
+                </article>
 
                 <!-- Service 3 -->
-                <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="assets/grease-trap-cleaning.webp" alt="تسليك مجاري تجارية">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fas fa-building"></i>
                     </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3 class="service-title">تسليك المجاري التجارية</h3>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> تسليك مجاري المطاعم</li>
-                            <li><i class="fas fa-check"></i> تنظيف مجاري الفنادق</li>
-                            <li><i class="fas fa-check"></i> صيانة مجاري المحلات</li>
-                            <li><i class="fas fa-check"></i> خدمة 24 ساعة للطوارئ</li>
-                        </ul>
-                        <a href="#" onclick="trackCall('966541828791'); return false;" class="service-link">
-                            اطلب الخدمة
-                            <i class="fas fa-arrow-left"></i>
-                        </a>
-                    </div>
-                </div>
+                    <h3 class="service-title">تسليك مجاري تجارية</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> تسليك مجاري المطاعم والفنادق</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> صيانة دورية للمنشآت التجارية</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> خدمة طوارئ 24 ساعة</li>
+                    </ul>
+                    <a href="tel:+966541828791" class="btn btn-call" style="margin-top:16px;display:inline-block" onclick="trackCall('966541828791'); return true;">
+                        اطلب الخدمة
+                    </a>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="section why-us">
+    <!-- Why Us Section -->
+    <section class="section why-us" aria-labelledby="why-title">
         <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-subtitle">لماذا نحن الأفضل؟</p>
-                <h2 class="section-title">التخصص يخلق التميز</h2>
-                <p class="section-description">نحن نركز على خدمات تسليك وتنظيف المجاري فقط لنكون الأفضل فيها</p>
+            <div class="section-header">
+                <h2 id="why-title" class="section-title">لماذا تختار النخبة؟</h2>
+                <p style="color:rgba(255,255,255,0.9)">التخصص والاحترافية في خدمة واحدة</p>
             </div>
+            
             <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon-large">
+                <div class="feature-card">
+                    <div class="feature-icon-large" aria-hidden="true">
                         <i class="fas fa-compress"></i>
                     </div>
-                    <h3 class="feature-title">كمبروسور متخصص</h3>
-                    <p class="feature-description">نستخدم كمبروسور ضغط عالي متخصص لتسليك وتنظيف المجاري فقط</p>
+                    <h3>كمبروسور متطور</h3>
+                    <p>أحدث معدات الضغط العالي لتسليك المجاري</p>
                 </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon-large">
-                        <i class="fas fa-tools"></i>
+                <div class="feature-card">
+                    <div class="feature-icon-large" aria-hidden="true">
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <h3 class="feature-title">معدات متخصصة</h3>
-                    <p class="feature-description">نملك أحدث معدات تسليك وتنظيف المجاري في الرياض</p>
+                    <h3>خدمة 24 ساعة</h3>
+                    <p>فريقنا جاهز للطوارئ على مدار الساعة</p>
                 </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon-large">
+                <div class="feature-card">
+                    <div class="feature-icon-large" aria-hidden="true">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="feature-title">فريق متخصص</h3>
-                    <p class="feature-description">فنيون مدربون تدريباً عالياً على تقنيات تسليك المجاري بالكمبروسور</p>
+                    <h3>فنيون متخصصون</h3>
+                    <p>خبرة عالية في حل مشاكل المجاري</p>
                 </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon-large">
-                        <i class="fas fa-shield-alt"></i>
+                <div class="feature-card">
+                    <div class="feature-icon-large" aria-hidden="true">
+                        <i class="fas fa-award"></i>
                     </div>
-                    <h3 class="feature-title">ضمان الجودة</h3>
-                    <p class="feature-description">نضمن لك نتائج ممتازة ونوفر خدمة ما بعد البيع</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Equipment Section -->
-    <section class="section equipment">
-        <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-subtitle">معداتنا المتخصصة</p>
-                <h2 class="section-title">أحدث أدوات التسليك والتنظيف</h2>
-                <p class="section-description">نستخدم فقط المعدات المتخصصة في تسليك وتنظيف المجاري</p>
-            </div>
-            <div class="equipment-grid">
-                <div class="equipment-card fade-in">
-                    <div class="equipment-icon">
-                        <i class="fas fa-compress"></i>
-                    </div>
-                    <h3 class="equipment-title">كمبروسر ضغط عالي</h3>
-                    <p class="equipment-description">لتنظيف المجاري بفعالية وإزالة أقسى الانسدادات</p>
-                </div>
-                <div class="equipment-card fade-in">
-                    <div class="equipment-icon">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <h3 class="equipment-title">أدوات تسليك يدوية</h3>
-                    <p class="equipment-description">أدوات متخصصة لتسليك المجاري المنزلية والتجارية</p>
-                </div>
-                <div class="equipment-card fade-in">
-                    <div class="equipment-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3 class="equipment-title">كاميرا تفتيش</h3>
-                    <p class="equipment-description">للكشف الدقيق عن أماكن الانسداد والتسرب</p>
-                </div>
-                <div class="equipment-card fade-in">
-                    <div class="equipment-icon">
-                        <i class="fas fa-spray-can"></i>
-                    </div>
-                    <h3 class="equipment-title">مواد تعقيم</h3>
-                    <p class="equipment-description">مواد تعقيم وتطهير متخصصة للصرف الصحي</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section - More Testimonials -->
-    <section class="section testimonials">
-        <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-subtitle">آراء العملاء</p>
-                <h2 class="section-title">ماذا يقول عملاؤنا؟</h2>
-                <p class="section-description">رضا عملائنا هو شهادتنا الحقيقية في التخصص</p>
-            </div>
-            <div class="testimonial-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "خدمة ممتازة وسريعة. وصل الفني خلال 30 دقيقة فقط وحل مشكلة انسداد المجاري في منزلي باحترافية عالية. أنصح الجميع بالتعامل معهم."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">أ</div>
-                        <div class="author-info">
-                            <h4>أحمد السعد</h4>
-                            <p>حي النخيل - الرياض</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "شركة محترفة جداً في تخصصها. استخدمت خدمة شفط المجاري بالكمبروسور للمطعم، العمل تم بدقة وبسرعة. الأسعار مناسبة والخدمة ممتازة."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">م</div>
-                        <div class="author-info">
-                            <h4>محمد القحطاني</h4>
-                            <p>صاحب مطعم - الرياض</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "تعاملت معهم عدة مرات في الفندق، وكل مرة أكتشف مدى احترافيتهم في مجال تسليك المجاري بالكمبروسور. الخدمة 24 ساعة ممتازة للطوارئ."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ف</div>
-                        <div class="author-info">
-                            <h4>فهد الشمري</h4>
-                            <p>مدير فندق - الرياض</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "ما يميز هذه الشركة هو تخصصها الدقيق. لا يتدخلون في أعمال أخرى، وهذا جعلهم خبراء حقيقيين في تسليك وتنظيف المجاري."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">خ</div>
-                        <div class="author-info">
-                            <h4>خالد المري</h4>
-                            <p>حي العليا - الرياض</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 5 -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "استخدمت خدمتهم في شقة الإيجار، العمل تم بنظافة ودقة متناهية. الفنيون محترفون ويعرفون ماذا يفعلون."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ن</div>
-                        <div class="author-info">
-                            <h4>نواف العتيبي</h4>
-                            <p>حي السليمانية - الرياض</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 6 -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "خدمة رائعة وسريعة الاستجابة. مشكلة مجاري البناية تم حلها في نفس اليوم. أنصح بهم لكل من يعاني من مشاكل الصرف الصحي."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">س</div>
-                        <div class="author-info">
-                            <h4>سعود الفهد</h4>
-                            <p>نائب مدير عمارة - الرياض</p>
-                        </div>
-                    </div>
+                    <h3>ضمان الجودة</h3>
+                    <p>نضمن لك خدمة ممتازة ونتائج مضمونة</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Districts Section -->
-    <section id="districts" class="section districts">
+    <section class="section" aria-labelledby="districts-title">
         <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-subtitle">مناطق الخدمة</p>
-                <h2 class="section-title">نغطي جميع أحياء الرياض</h2>
-                <p class="section-description">نقدم خدمات تسليك المجاري في جميع مناطق الرياض</p>
+            <div class="section-header">
+                <h2 id="districts-title" class="section-title">نغطي جميع أحياء الرياض</h2>
+                <p>خدمة فورية في جميع أنحاء الرياض</p>
             </div>
+            
             <div class="districts-grid">
-                <!-- District 1 -->
-                <div class="district-card fade-in">
-                    <div class="district-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="district-name">حي النخيل</h3>
-                    <p class="district-services">تسليك مجاري - تنظيف</p>
+                <div class="district-card">
+                    <div class="district-icon" aria-hidden="true"><i class="fas fa-building"></i></div>
+                    <h3>حي النخيل</h3>
                 </div>
-
-                <!-- District 2 -->
-                <div class="district-card fade-in">
-                    <div class="district-icon">
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <h3 class="district-name">حي الملز</h3>
-                    <p class="district-services">تنظيف شامل - صيانة</p>
+                <div class="district-card">
+                    <div class="district-icon" aria-hidden="true"><i class="fas fa-city"></i></div>
+                    <h3>حي الملز</h3>
                 </div>
-
-                <!-- District 3 -->
-                <div class="district-card fade-in">
-                    <div class="district-icon">
-                        <i class="fas fa-hotel"></i>
-                    </div>
-                    <h3 class="district-name">حي العليا</h3>
-                    <p class="district-services">خدمات تجارية - فنادق</p>
+                <div class="district-card">
+                    <div class="district-icon" aria-hidden="true"><i class="fas fa-hotel"></i></div>
+                    <h3>حي العليا</h3>
                 </div>
-
-                <!-- District 4 -->
-                <div class="district-card fade-in">
-                    <div class="district-icon">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3 class="district-name">حي السليمانية</h3>
-                    <p class="district-services">مطاعم - محلات تجارية</p>
+                <div class="district-card">
+                    <div class="district-icon" aria-hidden="true"><i class="fas fa-store"></i></div>
+                    <h3>حي السليمانية</h3>
                 </div>
-
-                <!-- District 5 -->
-                <div class="district-card fade-in">
-                    <div class="district-icon">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <h3 class="district-name">حي اليرموك</h3>
-                    <p class="district-services">خدمات سكنية - منازل</p>
+                <div class="district-card">
+                    <div class="district-icon" aria-hidden="true"><i class="fas fa-tree"></i></div>
+                    <h3>حي اليرموك</h3>
                 </div>
-
-                <!-- District 6 -->
-                <div class="district-card fade-in">
-                    <div class="district-icon">
-                        <i class="fas fa-umbrella-beach"></i>
-                    </div>
-                    <h3 class="district-name">حي الغدير</h3>
-                    <p class="district-services">مجاري منزلية - صيانة</p>
+                <div class="district-card">
+                    <div class="district-icon" aria-hidden="true"><i class="fas fa-home"></i></div>
+                    <h3>حي النرجس</h3>
                 </div>
-
-                <!-- District 7 -->
-                <div class="district-card fade-in">
-                    <div class="district-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3 class="district-name">حي العريجاء</h3>
-                    <p class="district-services">خدمات صناعية - تجارية</p>
+                <div class="district-card">
+                    <div class="district-icon" aria-hidden="true"><i class="fas fa-umbrella-beach"></i></div>
+                    <h3>حي الغدير</h3>
                 </div>
-
-                <!-- District 8 -->
-                <div class="district-card fade-in">
-                    <div class="district-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3 class="district-name">حي النرجس</h3>
-                    <p class="district-services">خدمات شاملة - طوارئ</p>
+                <div class="district-card">
+                    <div class="district-icon" aria-hidden="true"><i class="fas fa-industry"></i></div>
+                    <h3>حي العريجاء</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section">
+    <!-- Testimonials -->
+    <section class="section testimonials" aria-labelledby="testimonials-title">
         <div class="container">
-            <div class="cta-section fade-in">
-                <div class="cta-content">
-                    <h2 class="cta-title">هل تواجه مشكلة في المجاري؟</h2>
-                    <p class="cta-description">
-                        نحن هنا لمساعدتك! اتصل بنا الآن للحصول على خدمة تسليك مجاري احترافية وسريعة بالكمبروسور
-                    </p>
-                    <div class="hero-buttons" style="justify-content: center;">
-                        <a href="#" onclick="trackCall('966541828791'); return false;" class="btn btn-call">
-                            <i class="fas fa-phone"></i>
-                            اتصل الآن: 0541828791
-                        </a>
-                        <a href="#" onclick="trackWhatsApp('966541828791'); return false;" class="btn btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            تواصل عبر واتساب
-                        </a>
+            <div class="section-header">
+                <h2 id="testimonials-title" class="section-title">آراء عملائنا</h2>
+                <p>ماذا يقول من جربوا خدمتنا</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="تقييم 5 نجوم">
+                        ★★★★★
                     </div>
+                    <p class="testimonial-text">"خدمة سريعة وممتازة، الفني وصل خلال نصف ساعة وحل المشكلة باحترافية"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">أ</div>
+                        <div>
+                            <h4>أحمد السعد</h4>
+                            <p style="color:#666">حي النخيل</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="تقييم 5 نجوم">
+                        ★★★★★
+                    </div>
+                    <p class="testimonial-text">"شركة محترفة ومتخصصة، استخدمت الكمبروسور للمطعم والنتيجة ممتازة"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">م</div>
+                        <div>
+                            <h4>محمد القحطاني</h4>
+                            <p style="color:#666">صاحب مطعم</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="تقييم 5 نجوم">
+                        ★★★★★
+                    </div>
+                    <p class="testimonial-text">"تعاملت معهم عدة مرات، دائمًا في الموعد والخدمة ممتازة"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">ف</div>
+                        <div>
+                            <h4>فهد الشمري</h4>
+                            <p style="color:#666">حي العليا</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="تقييم 5 نجوم">
+                        ★★★★★
+                    </div>
+                    <p class="testimonial-text">"أنصح بالتعامل معهم، تخصصهم الدقيق في المجاري يظهر في جودة العمل"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">خ</div>
+                        <div>
+                            <h4>خالد المري</h4>
+                            <p style="color:#666">حي السليمانية</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" aria-label="اتصل بنا الآن">
+        <div class="container">
+            <div class="cta-section">
+                <h2 style="font-size:28px;margin-bottom:16px">هل تواجه مشكلة في المجاري؟</h2>
+                <p style="font-size:18px;margin-bottom:24px;opacity:0.9">اتصل بنا الآن لخدمة فورية على مدار الساعة</p>
+                <div>
+                    <a href="tel:+966541828791" class="btn btn-call" style="background:white;color:var(--primary);margin:4px" onclick="trackCall('966541828791'); return true;">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        0541828791
+                    </a>
+                    <a href="https://wa.me/966541828791" class="btn btn-whatsapp" style="margin:4px" onclick="trackWhatsApp('966541828791'); return true;">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        واتساب
+                    </a>
                 </div>
             </div>
         </div>
@@ -1639,142 +546,54 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-water"></i>
-                        </div>
-                        <div class="logo-text">
-                            <span class="company">شركة النخبة</span>
-                        </div>
+                    <div class="footer-logo" style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+                        <div class="logo-icon" aria-hidden="true"><i class="fas fa-water"></i></div>
+                        <span style="font-size:20px;font-weight:700">شركة النخبة</span>
                     </div>
-                    <p class="footer-about">
-                        شركة متخصصة فقط في خدمات تسليك المجاري والتنظيف بالكمبروسور بالرياض. نقدم خدمات احترافية بأعلى معايير الجودة باستخدام أحدث معدات الكمبروسور.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" onclick="trackWhatsApp('966541828791'); return false;" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" onclick="trackCall('966541828791'); return false;" class="social-link"><i class="fas fa-phone"></i></a>
-                        <a href="mailto:info@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
+                    <p style="color:rgba(255,255,255,0.7);margin-bottom:16px">متخصصون في تسليك وتنظيف المجاري بالرياض منذ 2010</p>
                 </div>
-
+                
                 <div>
-                    <h3 class="footer-heading">خدماتنا</h3>
+                    <h3 style="margin-bottom:16px">روابط سريعة</h3>
                     <ul class="footer-links">
-                        <li><a href="#services"><i class="fas fa-chevron-left"></i> تسليك المجاري المنزلية</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-left"></i> شفط المجاري بالكمبروسور</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-left"></i> تسليك المجاري التجارية</a></li>
-                        <li><a href="#districts"><i class="fas fa-chevron-left"></i> خدمة جميع أحياء الرياض</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-left" aria-hidden="true"></i> خدماتنا</a></li>
+                        <li><a href="#districts"><i class="fas fa-chevron-left" aria-hidden="true"></i> مناطق الخدمة</a></li>
                     </ul>
                 </div>
-
+                
                 <div>
-                    <h3 class="footer-heading">اتصل بنا</h3>
+                    <h3 style="margin-bottom:16px">اتصل بنا</h3>
                     <ul class="contact-info">
                         <li>
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <strong>رقم الهاتف</strong>
-                                <p><a href="#" onclick="trackCall('966541828791'); return false;" style="color: white; text-decoration: none;">0541828791</a></p>
-                            </div>
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+966541828791" style="color:white;text-decoration:none" onclick="trackCall('966541828791'); return true;">0541828791</a>
                         </li>
                         <li>
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <strong>ساعات العمل</strong>
-                                <p>24 ساعة / 7 أيام</p>
-                            </div>
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <span>24 ساعة - 7 أيام</span>
                         </li>
                         <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>موقعنا</strong>
-                                <p>جميع أحياء الرياض</p>
-                            </div>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <span>الرياض - جميع الأحياء</span>
                         </li>
                     </ul>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 شركة النخبة - متخصصون في تسليك المجاري والتنظيف بالكمبروسور. جميع الحقوق محفوظة.</p>
+                <p>© 2024 شركة النخبة - جميع الحقوق محفوظة</p>
             </div>
         </div>
     </footer>
 
-    <!-- Action Buttons -->
-    <div class="action-buttons">
-        <a href="#" onclick="trackWhatsApp('966541828791'); return false;" class="action-btn whatsapp">
+    <!-- Floating Action Buttons -->
+    <div style="position:fixed;bottom:20px;left:20px;z-index:1000;display:flex;flex-direction:column;gap:10px">
+        <a href="https://wa.me/966541828791" style="width:50px;height:50px;border-radius:50%;background:#25D366;color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 15px rgba(0,0,0,0.2)" aria-label="واتساب" onclick="trackWhatsApp('966541828791'); return true;">
             <i class="fab fa-whatsapp"></i>
-            <span class="badge">واتساب</span>
         </a>
-        <a href="#" onclick="trackCall('966541828791'); return false;" class="action-btn call">
+        <a href="tel:+966541828791" style="width:50px;height:50px;border-radius:50%;background:#FF9F1A;color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 15px rgba(0,0,0,0.2)" aria-label="اتصال" onclick="trackCall('966541828791'); return true;">
             <i class="fas fa-phone"></i>
-            <span class="badge">اتصال</span>
         </a>
     </div>
-
-    <script>
-        // Header scroll effect
-        const header = document.querySelector('.header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        // Observe all animated elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Add hover effect to service cards
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-15px)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Make action buttons pulse on load
-        setTimeout(() => {
-            document.querySelectorAll('.action-btn').forEach(btn => {
-                btn.style.animation = 'pulse 2s 3';
-            });
-        }, 1000);
-    </script>
 </body>
 </html>
