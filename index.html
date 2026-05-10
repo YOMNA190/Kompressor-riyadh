@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>شفط حفريات ومياه جوفيه وتسليك مجاري بالرياض - شركة النخبة | خدمة 24 ساعة</title>
+    <title>تسليك مجاري بالكمبروسور بالرياض - شركة النخبة | خدمة 24 ساعة</title>
     
     <!-- Google tag (gtag.js) - Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17962928995"></script>
@@ -45,119 +45,23 @@
         }
     </script>
     
-    <!-- URL Parameters Handler - هذا الكود الجديد سيتحكم في عرض الخدمات حسب الرابط -->
-    <script>
-        // دالة للتعامل مع معلمات URL
-        function handleUrlParameters() {
-            // الحصول على معلمات URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const service = urlParams.get('service');
-            
-            // إخفاء جميع أقسام الخدمات أولاً
-            hideAllServiceSections();
-            
-            // عرض القسم المناسب حسب المعلمة
-            if (service === 'drain-cleaning') {
-                showServiceSection('drain-cleaning');
-                updatePageTitle('تسليك مجاري منزلية بالرياض - شركة النخبة');
-                updateMetaDescription('خدمة تسليك مجاري منزلية بالرياض باحدث معدات الكمبروسور. فنيون متخصصون، خدمة فورية 24 ساعة.');
-            } 
-            else if (service === 'septic-tank') {
-                showServiceSection('septic-tank');
-                updatePageTitle('شفط مجاري بالكمبروسور بالرياض - شركة النخبة');
-                updateMetaDescription('شفط المجاري بالكمبروسور بالرياض - ضغط عالي لإزالة أقسى الانسدادات. خدمة سريعة على مدار الساعة.');
-            }
-            else if (service === 'tank-cleaning') {
-                showServiceSection('tank-cleaning');
-                updatePageTitle('تنظيف خزانات الصرف الصحي بالرياض - شركة النخبة');
-                updateMetaDescription('تنظيف خزانات الصرف الصحي بالرياض بأحدث المعدات. ضمان الجودة وأسعار تنافسية.');
-            }
-            else if (service === 'excavation') {
-                showServiceSection('excavation');
-                updatePageTitle('شفط حفريات ومياه جوفيه بالرياض - شركة النخبة');
-                updateMetaDescription('خدمة شفط حفريات ومياه جوفيه بالرياض بأحدث معدات الشفط. إزالة مخلفات الحفر والمياه الجوفية بسرعة وكفاءة.');
-            }
-            else if (service === '247') {
-                showServiceSection('emergency');
-                updatePageTitle('طوارئ تسليك مجاري 24 ساعة بالرياض - شركة النخبة');
-                updateMetaDescription('خدمة طوارئ تسليك مجاري 24 ساعة بالرياض. وصول سريع خلال 30 دقيقة لفريق متخصص.');
-            }
-            else {
-                // إذا لم توجد معلمة، اعرض كل الخدمات
-                showAllServiceSections();
-                updatePageTitle('شفط حفريات ومياه جوفيه وتسليك مجاري بالرياض - شركة النخبة | خدمة 24 ساعة');
-                updateMetaDescription('شركة النخبة لشفط الحفريات والمياه الجوفيه وتسليك المجاري بالرياض - خدمة فورية 24 ساعة باحدث معدات الكمبروسور. فنيون متخصصون، ضمان الجودة.');
-            }
-        }
-        
-        // إخفاء جميع أقسام الخدمات
-        function hideAllServiceSections() {
-            const sections = document.querySelectorAll('.service-card');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-        }
-        
-        // إظهار قسم خدمة معين
-        function showServiceSection(serviceId) {
-            const section = document.getElementById(serviceId);
-            if (section) {
-                section.style.display = 'block';
-            }
-            // اخفاء قسم "جميع الخدمات" إذا كان موجوداً
-            const allServicesHeader = document.querySelector('.all-services-header');
-            if (allServicesHeader) {
-                allServicesHeader.style.display = 'none';
-            }
-        }
-        
-        // إظهار جميع أقسام الخدمات (لحالة عدم وجود معلمة)
-        function showAllServiceSections() {
-            const sections = document.querySelectorAll('.service-card');
-            sections.forEach(section => {
-                section.style.display = 'block';
-            });
-            const allServicesHeader = document.querySelector('.all-services-header');
-            if (allServicesHeader) {
-                allServicesHeader.style.display = 'block';
-            }
-        }
-        
-        // تحديث عنوان الصفحة
-        function updatePageTitle(title) {
-            document.title = title;
-        }
-        
-        // تحديث وصف الميتا
-        function updateMetaDescription(description) {
-            let metaTag = document.querySelector('meta[name="description"]');
-            if (metaTag) {
-                metaTag.setAttribute('content', description);
-            }
-        }
-        
-        // تنفيذ الدالة عند تحميل الصفحة
-        window.onload = function() {
-            handleUrlParameters();
-        };
-    </script>
-    
     <!-- SEO Meta Tags -->
-    <meta name="description" content="شركة النخبة لشفط الحفريات والمياه الجوفيه وتسليك المجاري بالرياض - خدمة فورية 24 ساعة باحدث معدات الكمبروسور. فنيون متخصصون، ضمان الجودة، أسعار تنافسية.">
-    <meta name="keywords" content="شفط حفريات, شفط مياه جوفيه, تسليك مجاري بالرياض, تسليك مجاري, شفط مجاري, تنظيف مجاري, كمبروسور مجاري, وايت شفط مجاري بالرياض, ارخص شركة تسليك مجاري بالرياض, شركة تنظيف بيارات بالرياض">
+    <meta name="description" content="شركة النخبة لتسليك المجاري بالكمبروسور بالرياض - خدمة فورية 24 ساعة بأحدث معدات الضغط العالي. فنيون متخصصون، ضمان الجودة، أسعار تنافسية.">
+    <meta name="keywords" content="تسليك مجاري بالكمبروسور, تسليك مجاري بالرياض, تسليك مجاري بالضغط, كمبروسور مجاري, تسليك مجاري 24 ساعة, أفضل شركة تسليك مجاري بالرياض, تسليك مجاري سريع">
+    <meta name="author" content="شركة النخبة لتسليك المجاري">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="SA-01">
     <meta name="geo.placename" content="Riyadh">
     <meta name="geo.position" content="24.7136;46.6753">
     <meta name="ICBM" content="24.7136, 46.6753">
-    <meta name="author" content="شركة النخبة لشفط الحفريات والمجاري">
-    <meta name="robots" content="index, follow">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="شركة النخبة لشفط الحفريات والمياه الجوفيه بالرياض">
-    <meta property="og:description" content="خدمة شفط حفريات ومياه جوفيه وتسليك مجاري فورية بالرياض بأحدث معدات الكمبروسور">
+    <meta property="og:title" content="شركة النخبة لتسليك المجاري بالكمبروسور بالرياض">
+    <meta property="og:description" content="خدمة تسليك مجاري بالكمبروسور فورية بالرياض بأحدث معدات الضغط العالي">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kompressor-riyadh.vercel.app">
     
-    <!-- Canonical URL - مهم لتجنب المحتوى المكرر -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://kompressor-riyadh.vercel.app">
     
     <!-- Fonts -->
@@ -165,6 +69,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PlumbingService",
+      "name": "شركة النخبة - تسليك مجاري بالكمبروسور",
+      "alternateName": "أفضل شركة تسليك مجاري بالرياض",
+      "description": "خدمات تسليك المجاري بالكمبروسور بالرياض بأحدث التقنيات وضمان الجودة.",
+      "url": "https://kompressor-riyadh.vercel.app",
+      "telephone": "+966579466115",
+      "email": "info@kompressor-sa.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الرياض",
+        "addressCountry": "SA"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "الرياض"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "212",
+        "bestRating": "5"
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer"
+    }
+    </script>
+    
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://kompressor-riyadh.vercel.app"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "تسليك مجاري بالكمبروسور",
+        "item": "https://kompressor-riyadh.vercel.app/#services"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "اتصل بنا",
+        "item": "https://kompressor-riyadh.vercel.app/#contact"
+      }]
+    }
+    </script>
     
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:'IBM Plex Sans Arabic',sans-serif}
@@ -213,7 +173,7 @@
         .why-us{background:var(--primary);color:white}
         .why-us .section-title{color:white}
         .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px}
-        .feature-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border-radius:20px;padding:30px;text-align:center}
+        .feature-card{text-align:center}
         .feature-icon-large{width:80px;height:80px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px}
         
         /* Districts */
@@ -277,7 +237,7 @@
         <div class="container">
             <div class="nav-container">
                 <a href="/" class="logo">
-                    <div class="logo-icon"><i class="fas fa-water"></i></div>
+                    <div class="logo-icon"><i class="fas fa-compress"></i></div>
                     <div class="logo-text"><span class="company">شركة النخبة</span></div>
                 </a>
                 <a href="tel:+966579466115" class="nav-cta" onclick="trackCall('966579466115'); return true;">
@@ -290,8 +250,8 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1 id="main-heading">شفط حفريات ومياه جوفيه وتسليك مجاري بالرياض<br><span style="color:var(--secondary)">فوري 24 ساعة</span></h1>
-            <p style="font-size:1.2rem;color:#666;margin-bottom:20px">متخصصون في شفط الحفريات والمياه الجوفيه وتسليك المجاري بالكمبروسور - خدمة سريعة بضمان الجودة</p>
+            <h1 id="main-heading">تسليك مجاري بالكمبروسور بالرياض<br><span style="color:var(--secondary)">فوري 24 ساعة</span></h1>
+            <p style="font-size:1.2rem;color:#666;margin-bottom:20px">متخصصون في تسليك المجاري بالكمبروسور بالضغط العالي - خدمة سريعة بضمان الجودة</p>
             <a href="tel:+966579466115" class="phone-number" onclick="trackCall('966579466115'); return true;">0579466115</a>
             <div style="margin-top:30px">
                 <a href="tel:+966579466115" class="btn btn-call" onclick="trackCall('966579466115'); return true;"><i class="fas fa-phone"></i> اتصل الآن</a>
@@ -303,29 +263,14 @@
     <!-- Services Section -->
     <section class="section">
         <div class="container">
-            <div class="section-header all-services-header">
+            <div class="section-header">
                 <h2 class="section-title">خدماتنا المتخصصة</h2>
-                <p>نحن متخصصون في شفط الحفريات والمياه الجوفيه وتسليك وتنظيف المجاري</p>
+                <p>نحن متخصصون في تسليك المجاري بالكمبروسور بأحدث التقنيات</p>
             </div>
             
             <div class="services-grid">
-                <!-- خدمة 1: شفط حفريات ومياه جوفيه (خدمة جديدة) -->
-                <div class="service-card" id="excavation">
-                    <div class="service-icon"><i class="fas fa-truck"></i></div>
-                    <h3 class="service-title">شفط حفريات ومياه جوفيه</h3>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> شفط مخلفات الحفر والردم</li>
-                        <li><i class="fas fa-check"></i> إزالة المياه الجوفية من الحفريات</li>
-                        <li><i class="fas fa-check"></i> تنظيف مواقع البناء والمشاريع</li>
-                        <li><i class="fas fa-check"></i> معدات شفط ضخمة للأحجام الكبيرة</li>
-                    </ul>
-                    <a href="tel:+966579466115" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="trackCall('966579466115'); return true;">
-                        <i class="fas fa-phone"></i> اطلب الخدمة
-                    </a>
-                </div>
-
-                <!-- خدمة 2: تسليك مجاري منزلية -->
-                <div class="service-card" id="drain-cleaning">
+                <!-- خدمة 1: تسليك مجاري منزلية -->
+                <div class="service-card">
                     <div class="service-icon"><i class="fas fa-home"></i></div>
                     <h3 class="service-title">تسليك مجاري منزلية</h3>
                     <ul class="service-features">
@@ -339,57 +284,35 @@
                     </a>
                 </div>
 
-                <!-- خدمة 3: شفط بالكمبروسور -->
-                <div class="service-card" id="septic-tank">
-                    <div class="service-icon"><i class="fas fa-compress"></i></div>
-                    <h3 class="service-title">شفط بالكمبروسور</h3>
+                <!-- خدمة 2: تسليك مجاري تجارية -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <h3 class="service-title">تسليك مجاري تجارية</h3>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> شفط المجاري بالضغط العالي</li>
-                        <li><i class="fas fa-check"></i> إزالة الانسدادات العنيدة</li>
+                        <li><i class="fas fa-check"></i> تسليك مجاري المحلات والمطاعم</li>
+                        <li><i class="fas fa-check"></i> تسليك مجاري المستشفيات والفنادق</li>
                         <li><i class="fas fa-check"></i> تنظيف خطوط الصرف الرئيسية</li>
-                        <li><i class="fas fa-check"></i> شفط البيارات والخزانات</li>
+                        <li><i class="fas fa-check"></i> صيانة دورية للمجاري</li>
                     </ul>
                     <a href="tel:+966579466115" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="trackCall('966579466115'); return true;">
                         <i class="fas fa-phone"></i> اطلب الخدمة
                     </a>
                 </div>
 
-                <!-- خدمة 4: تنظيف خزانات -->
-                <div class="service-card" id="tank-cleaning">
-                    <div class="service-icon"><i class="fas fa-water"></i></div>
-                    <h3 class="service-title">تنظيف خزانات الصرف</h3>
+                <!-- خدمة 3: تسليك مجاري بالضغط العالي -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-compress"></i></div>
+                    <h3 class="service-title">تسليك بالضغط العالي</h3>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> تنظيف خزانات الصرف الصحي</li>
-                        <li><i class="fas fa-check"></i> تعقيم وتطهير الخزانات</li>
-                        <li><i class="fas fa-check"></i> إزالة الرواسب والدهون</li>
-                        <li><i class="fas fa-check"></i> صيانة دورية للخزانات</li>
+                        <li><i class="fas fa-check"></i> ضغط عالي يصل إلى 4000 PSI</li>
+                        <li><i class="fas fa-check"></i> إزالة الانسدادات العنيدة</li>
+                        <li><i class="fas fa-check"></i> تنظيف شامل للمواسير</li>
+                        <li><i class="fas fa-check"></i> معدات ألمانية حديثة</li>
                     </ul>
                     <a href="tel:+966579466115" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="trackCall('966579466115'); return true;">
                         <i class="fas fa-phone"></i> اطلب الخدمة
                     </a>
                 </div>
-
-                <!-- خدمة 5: طوارئ 24 ساعة -->
-                <div class="service-card" id="emergency">
-                    <div class="service-icon"><i class="fas fa-clock"></i></div>
-                    <h3 class="service-title">طوارئ 24 ساعة</h3>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> استجابة فورية خلال 30 دقيقة</li>
-                        <li><i class="fas fa-check"></i> خدمة على مدار الساعة</li>
-                        <li><i class="fas fa-check"></i> جميع أيام الأسبوع</li>
-                        <li><i class="fas fa-check"></i> فريق متخصص للطوارئ</li>
-                    </ul>
-                    <a href="tel:+966579466115" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="trackCall('966579466115'); return true;">
-                        <i class="fas fa-phone"></i> اطلب الخدمة
-                    </a>
-                </div>
-            </div>
-            
-            <!-- رابط العودة لجميع الخدمات (يظهر فقط عند فتح رابط خدمة محددة) -->
-            <div id="back-to-all" style="text-align:center;margin-top:30px;display:none">
-                <a href="/" class="btn btn-outline">
-                    <i class="fas fa-arrow-right"></i> عرض جميع الخدمات
-                </a>
             </div>
         </div>
     </section>
@@ -399,7 +322,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">لماذا تختار النخبة؟</h2>
-                <p style="color:rgba(255,255,255,0.9)">التخصص والاحترافية في شفط الحفريات والمياه الجوفيه وتسليك المجاري</p>
+                <p style="color:rgba(255,255,255,0.9)">التخصص والاحترافية في تسليك المجاري بالكمبروسور</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
@@ -461,7 +384,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"شركة محترفة ومتخصصة، استخدمت الكمبروسور للمطعم والنتيجة ممتازة"</p>
+                    <p class="testimonial-text">"شركة محترفة ومتخصصة، استخدموا الكمبروسور للمطعم والنتيجة ممتازة"</p>
                     <div class="testimonial-author"><div class="author-avatar">م</div><div><h4>محمد القحطاني</h4><p style="color:#666">صاحب مطعم</p></div></div>
                 </div>
                 <div class="testimonial-card">
@@ -477,7 +400,7 @@
     <section class="section">
         <div class="container">
             <div class="cta-section">
-                <h2 style="font-size:2rem;margin-bottom:20px">هل تحتاج شفط حفريات أو حل لمشكلة المجاري؟</h2>
+                <h2 style="font-size:2rem;margin-bottom:20px">هل تحتاج لتسليك مجاري؟</h2>
                 <p style="font-size:1.2rem;margin-bottom:30px;opacity:0.9">اتصل بنا الآن لخدمة فورية على مدار الساعة</p>
                 <div>
                     <a href="tel:+966579466115" class="btn" style="background:white;color:var(--primary);margin:5px" onclick="trackCall('966579466115'); return true;">
@@ -497,20 +420,19 @@
             <div class="footer-grid">
                 <div>
                     <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
-                        <div class="logo-icon"><i class="fas fa-water"></i></div>
+                        <div class="logo-icon"><i class="fas fa-compress"></i></div>
                         <span style="font-size:1.5rem;font-weight:700">شركة النخبة</span>
                     </div>
-                    <p style="color:rgba(255,255,255,0.7);margin-bottom:20px">متخصصون في شفط الحفريات والمياه الجوفيه وتسليك وتنظيف المجاري بالرياض منذ 2010</p>
+                    <p style="color:rgba(255,255,255,0.7);margin-bottom:20px">متخصصون في تسليك المجاري بالكمبروسور بالرياض منذ 2010</p>
                 </div>
                 <div>
                     <h3 style="margin-bottom:20px">روابط سريعة</h3>
                     <ul class="footer-links">
                         <li><a href="/"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
-                        <li><a href="?service=excavation"><i class="fas fa-chevron-left"></i> شفط حفريات ومياه جوفيه</a></li>
-                        <li><a href="?service=drain-cleaning"><i class="fas fa-chevron-left"></i> تسليك منزلي</a></li>
-                        <li><a href="?service=septic-tank"><i class="fas fa-chevron-left"></i> شفط بالكمبروسور</a></li>
-                        <li><a href="?service=tank-cleaning"><i class="fas fa-chevron-left"></i> تنظيف خزانات</a></li>
-                        <li><a href="?service=247"><i class="fas fa-chevron-left"></i> طوارئ 24 ساعة</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+                        <li><a href="#coverage"><i class="fas fa-chevron-left"></i> المناطق</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-left"></i> آراء العملاء</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
                     </ul>
                 </div>
                 <div>
@@ -533,15 +455,5 @@
         <a href="https://wa.me/966579466115" class="float-btn whatsapp" onclick="trackWhatsApp('966579466115'); return true;"><i class="fab fa-whatsapp fa-2x"></i></a>
         <a href="tel:+966579466115" class="float-btn call" onclick="trackCall('966579466115'); return true;"><i class="fas fa-phone fa-2x"></i></a>
     </div>
-
-    <!-- تفعيل زر العودة لجميع الخدمات -->
-    <script>
-        // إظهار زر العودة إذا كنا في وضع خدمة محددة
-        const urlParams = new URLSearchParams(window.location.search);
-        const service = urlParams.get('service');
-        if (service) {
-            document.getElementById('back-to-all').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
