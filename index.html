@@ -74,7 +74,7 @@
       "alternateName": "أفضل شركة تسليك مجاري بالرياض",
       "description": "خدمات تسليك المجاري بالكمبروسور بالرياض بأحدث التقنيات وضمان الجودة.",
       "url": "https://riyadh-drain-landing.vercel.app",
-      "telephone": "+966535816527",
+      "telephone": "+966573824314",
       "email": "info@kompressor-sa.com",
       "priceRange": "$$",
       "address": {
@@ -206,6 +206,23 @@
         .float-btn.whatsapp{background:#25D366}
         .float-btn.call{background:#FF9F1A}
         
+
+        /* National Day offer popup */
+        .offer-modal{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(10,61,98,.78);backdrop-filter:blur(5px)}
+        .offer-modal[hidden]{display:none}
+        .offer-card{position:relative;width:min(100%,480px);overflow:hidden;background:white;border-radius:26px;box-shadow:0 25px 80px rgba(0,0,0,.35);text-align:center;animation:offer-pop .35s ease-out}
+        .offer-card::before{content:"";display:block;height:8px;background:linear-gradient(90deg,#006C35 0 33%,white 33% 66%,#CE1126 66%)}
+        .offer-content{padding:34px 28px 28px}
+        .offer-close{position:absolute;top:16px;left:16px;width:36px;height:36px;border:0;border-radius:50%;background:#f1f5f9;color:#475569;font-size:25px;line-height:1;cursor:pointer}
+        .offer-badge{display:inline-block;margin-bottom:12px;padding:7px 16px;border-radius:999px;background:#e8f5ee;color:#006C35;font-size:.9rem;font-weight:700}
+        .offer-title{margin-bottom:12px;color:var(--primary);font-size:1.8rem;line-height:1.5;font-weight:800}
+        .offer-copy{margin-bottom:20px;color:#64748b;line-height:1.9}
+        .offer-phone{display:block;margin:12px 0 20px;color:var(--primary);font-size:1.6rem;font-weight:800;direction:ltr;text-decoration:none}
+        .offer-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+        .offer-actions .btn{flex:1 1 180px;margin:0}
+        .offer-note{margin-top:16px;color:#94a3b8;font-size:.85rem}
+        @keyframes offer-pop{from{opacity:0;transform:translateY(20px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+
         /* Responsive */
         @media (max-width:768px){
             .hero h1{font-size:2rem}
@@ -216,12 +233,31 @@
     </style>
 </head>
 <body>
+
+    <!-- National Day offer popup: opens immediately on entry -->
+    <div id="offerModal" class="offer-modal" role="dialog" aria-modal="true" aria-labelledby="offerTitle">
+        <div class="offer-card">
+            <button type="button" class="offer-close" id="offerClose" aria-label="إغلاق">×</button>
+            <div class="offer-content">
+                <div class="offer-badge">عروض اليوم الوطني</div>
+                <h2 id="offerTitle" class="offer-title">اتصل الآن واحصل على عرض اليوم</h2>
+                <p class="offer-copy">استفد من عروضنا الخاصة لخدمات تسليك المجاري بالكمبروسر في الرياض، وفريقنا جاهز لخدمتك على مدار الساعة.</p>
+                <a class="offer-phone" href="tel:+966573824314">+966 57 382 4314</a>
+                <div class="offer-actions">
+                    <a class="btn btn-call" href="tel:+966573824314" onclick="return gtag_report_conversion('tel:+966573824314');"><i class="fas fa-phone"></i> اتصل للحصول على العرض</a>
+                    <a class="btn btn-whatsapp" href="https://wa.me/966573824314" target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/966573824314');"><i class="fab fa-whatsapp"></i> واتساب</a>
+                </div>
+                <p class="offer-note">اضغط × لمتابعة تصفح الموقع</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Emergency Bar -->
     <div class="emergency-bar">
         <div class="container">
-            <a href="tel:0535816527" onclick="return gtag_report_conversion('tel:0535816527');">
+            <a href="tel:0573824314" onclick="return gtag_report_conversion('tel:0573824314');">
                 <i class="fas fa-phone" aria-hidden="true"></i>
-                <span>طوارئ 24 ساعة: 0535816527</span>
+                <span>طوارئ 24 ساعة: 0573824314</span>
                 <i class="fas fa-bolt" aria-hidden="true"></i>
             </a>
         </div>
@@ -235,7 +271,7 @@
                     <div class="logo-icon"><i class="fas fa-compress"></i></div>
                     <div class="logo-text"><span class="company">شركة النخبة</span></div>
                 </a>
-                <a href="tel:0535816527" class="nav-cta" onclick="return gtag_report_conversion('tel:0535816527');">
+                <a href="tel:0573824314" class="nav-cta" onclick="return gtag_report_conversion('tel:0573824314');">
                     <i class="fas fa-phone"></i> طلب خدمة فورية
                 </a>
             </div>
@@ -247,10 +283,10 @@
         <div class="container">
             <h1 id="main-heading">أقوى شركة تسليك مجاري بالكمبروسر بالرياض<br><span style="color:var(--secondary)">لفتح أصعب الانسدادات</span></h1>
             <p style="font-size:1.2rem;color:#666;margin-bottom:20px">نستخدم تكنولوجيا الضغط الهيدروليكي العالي ونفخ الهواء (الكمبروسر) لتنظيف مواسير الصرف</p>
-            <a href="tel:0535816527" class="phone-number" onclick="return gtag_report_conversion('tel:0535816527');">0535816527</a>
+            <a href="tel:0573824314" class="phone-number" onclick="return gtag_report_conversion('tel:0573824314');">0573824314</a>
             <div style="margin-top:30px">
-                <a href="tel:0535816527" class="btn btn-call" onclick="return gtag_report_conversion('tel:0535816527');"><i class="fas fa-phone"></i> اتصل الآن</a>
-                <a href="https://wa.me/966535816527" class="btn btn-whatsapp" onclick="return gtag_report_conversion('https://wa.me/966535816527');"><i class="fab fa-whatsapp"></i> واتساب</a>
+                <a href="tel:0573824314" class="btn btn-call" onclick="return gtag_report_conversion('tel:0573824314');"><i class="fas fa-phone"></i> اتصل الآن</a>
+                <a href="https://wa.me/966573824314" class="btn btn-whatsapp" onclick="return gtag_report_conversion('https://wa.me/966573824314');"><i class="fab fa-whatsapp"></i> واتساب</a>
             </div>
         </div>
     </section>
@@ -274,7 +310,7 @@
                         <li><i class="fas fa-check"></i> تنظيف مواسير الصرف الصحي</li>
                         <li><i class="fas fa-check"></i> إصلاح تسربات المجاري</li>
                     </ul>
-                    <a href="tel:0535816527" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="return gtag_report_conversion('tel:0535816527');">
+                    <a href="tel:0573824314" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="return gtag_report_conversion('tel:0573824314');">
                         <i class="fas fa-phone"></i> اطلب الخدمة
                     </a>
                 </div>
@@ -289,7 +325,7 @@
                         <li><i class="fas fa-check"></i> تنظيف خطوط الصرف الرئيسية</li>
                         <li><i class="fas fa-check"></i> صيانة دورية للمجاري</li>
                     </ul>
-                    <a href="tel:0535816527" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="return gtag_report_conversion('tel:0535816527');">
+                    <a href="tel:0573824314" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="return gtag_report_conversion('tel:0573824314');">
                         <i class="fas fa-phone"></i> اطلب الخدمة
                     </a>
                 </div>
@@ -304,7 +340,7 @@
                         <li><i class="fas fa-check"></i> تنظيف شامل للمواسير</li>
                         <li><i class="fas fa-check"></i> معدات ألمانية حديثة</li>
                     </ul>
-                    <a href="tel:0535816527" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="return gtag_report_conversion('tel:0535816527');">
+                    <a href="tel:0573824314" class="btn btn-call" style="margin-top:20px;display:inline-block" onclick="return gtag_report_conversion('tel:0573824314');">
                         <i class="fas fa-phone"></i> اطلب الخدمة
                     </a>
                 </div>
@@ -398,10 +434,10 @@
                 <h2 style="font-size:2rem;margin-bottom:20px">هل تحتاج لتسليك مجاري؟</h2>
                 <p style="font-size:1.2rem;margin-bottom:30px;opacity:0.9">اتصل بنا الآن لخدمة فورية على مدار الساعة</p>
                 <div>
-                    <a href="tel:0535816527" class="btn" style="background:white;color:var(--primary);margin:5px" onclick="return gtag_report_conversion('tel:0535816527');">
-                        <i class="fas fa-phone"></i> 0535816527
+                    <a href="tel:0573824314" class="btn" style="background:white;color:var(--primary);margin:5px" onclick="return gtag_report_conversion('tel:0573824314');">
+                        <i class="fas fa-phone"></i> 0573824314
                     </a>
-                    <a href="https://wa.me/966535816527" class="btn btn-whatsapp" style="margin:5px" onclick="return gtag_report_conversion('https://wa.me/966535816527');">
+                    <a href="https://wa.me/966573824314" class="btn btn-whatsapp" style="margin:5px" onclick="return gtag_report_conversion('https://wa.me/966573824314');">
                         <i class="fab fa-whatsapp"></i> واتساب
                     </a>
                 </div>
@@ -433,7 +469,7 @@
                 <div>
                     <h3 style="margin-bottom:20px">اتصل بنا</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-phone"></i> <a href="tel:0535816527" style="color:white;text-decoration:none" onclick="return gtag_report_conversion('tel:0535816527');">0535816527</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:0573824314" style="color:white;text-decoration:none" onclick="return gtag_report_conversion('tel:0573824314');">0573824314</a></li>
                         <li><i class="fas fa-clock"></i> <span>24 ساعة - 7 أيام</span></li>
                         <li><i class="fas fa-map-marker-alt"></i> <span>الرياض - جميع الأحياء</span></li>
                     </ul>
@@ -447,8 +483,22 @@
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/966535816527" class="float-btn whatsapp" onclick="return gtag_report_conversion('https://wa.me/966535816527');"><i class="fab fa-whatsapp fa-2x"></i></a>
-        <a href="tel:0535816527" class="float-btn call" onclick="return gtag_report_conversion('tel:0535816527');"><i class="fas fa-phone fa-2x"></i></a>
+        <a href="https://wa.me/966573824314" class="float-btn whatsapp" onclick="return gtag_report_conversion('https://wa.me/966573824314');"><i class="fab fa-whatsapp fa-2x"></i></a>
+        <a href="tel:0573824314" class="float-btn call" onclick="return gtag_report_conversion('tel:0573824314');"><i class="fas fa-phone fa-2x"></i></a>
     </div>
+
+    <script>
+        (function () {
+            const modal = document.getElementById('offerModal');
+            const close = document.getElementById('offerClose');
+            if (!modal || !close) return;
+            const closeModal = () => { modal.hidden = true; document.body.style.overflow = ''; };
+            close.addEventListener('click', closeModal);
+            modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+            document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeModal(); });
+            document.body.style.overflow = 'hidden';
+        }());
+    </script>
+
 </body>
 </html>
